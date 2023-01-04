@@ -1,0 +1,1911 @@
+        -:    0:Source:/mnt/d/周秉霖/Bookstore/Books.h
+        -:    0:Graph:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef BOOKSTORE_BOOKS_H
+        -:    2:#define BOOKSTORE_BOOKS_H
+        -:    3:
+        -:    4:#include <iostream>
+        -:    5:#include <string>
+        -:    6:#include <vector>
+        -:    7:#include <cstdio>
+        -:    8:#include <iomanip>
+        -:    9:
+        -:   10:using std::cout;
+        -:   11:using std::endl;
+        -:   12:using std::string;
+        -:   13:using std::fixed;
+        -:   14:using std::setprecision;
+        -:   15:
+        -:   16:class Book{//存储每一本Book的信息
+        -:   17:private:
+        -:   18:    char ISBN[25] = "";
+        -:   19:    char Book_Name[64] = "";
+        -:   20:    char Author[64] = "";
+        -:   21:    char Keyword[64];
+        -:   22:    int Quantity = 0;
+        -:   23:    //小数默认为固定为小数点后两位
+        -:   24:    double Price = 0;
+        -:   25:public:
+function _ZN4BookC2Ev called 1 returned 100% blocks executed 100%
+        1:   26:    Book() = default;
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+function _ZN4BookC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   27:    Book(string tmp_ISBN){
+    %%%%%:   27-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+    #####:   28:        strcpy(ISBN, tmp_ISBN.c_str());
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   28-block  0
+    %%%%%:   28-block  1
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   28-block  2
+    #####:   29:    }
+function _ZN4Book7Get_NumEv called 0 returned 0% blocks executed 0%
+    #####:   30:    int Get_Num(){
+    #####:   31:        return Quantity;
+    %%%%%:   31-block  0
+call    0 never executed
+call    1 never executed
+        -:   32:    }
+function _ZN4Book7Sub_NumERKi called 0 returned 0% blocks executed 0%
+    #####:   33:    void Sub_Num(const int& num){
+    #####:   34:        Quantity -= num;
+    %%%%%:   34-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   35:    }
+function _ZN4Book7Add_NumERKi called 0 returned 0% blocks executed 0%
+    #####:   36:    void Add_Num(const int& num){
+    #####:   37:        Quantity += num;
+    %%%%%:   37-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   38:    }
+function _ZN4Book8Get_ISBNB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   39:    string Get_ISBN(){
+    #####:   40:        return ISBN;
+    %%%%%:   40-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   40-block  1
+call    6 never executed
+call    7 never executed
+    $$$$$:   40-block  2
+call    8 never executed
+    $$$$$:   40-block  3
+call    9 never executed
+        -:   41:    }
+function _ZN4Book8Get_NameB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   42:    string Get_Name(){
+    #####:   43:        return Book_Name;
+    %%%%%:   43-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   43-block  1
+call    7 never executed
+call    8 never executed
+    $$$$$:   43-block  2
+call    9 never executed
+    $$$$$:   43-block  3
+call   10 never executed
+        -:   44:    }
+function _ZN4Book10Get_AuthorB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   45:    string Get_Author(){
+    #####:   46:        return Author;
+    %%%%%:   46-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   46-block  1
+call    7 never executed
+call    8 never executed
+    $$$$$:   46-block  2
+call    9 never executed
+    $$$$$:   46-block  3
+call   10 never executed
+        -:   47:    }
+function _ZN4Book7Get_KeyB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   48:    string Get_Key(){
+    #####:   49:        return Keyword;
+    %%%%%:   49-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   49-block  1
+call    7 never executed
+call    8 never executed
+    $$$$$:   49-block  2
+call    9 never executed
+    $$$$$:   49-block  3
+call   10 never executed
+        -:   50:    }
+function _ZN4Book9Get_PriceEv called 0 returned 0% blocks executed 0%
+    #####:   51:    double Get_Price(){
+    #####:   52:        return Price;
+    %%%%%:   52-block  0
+call    0 never executed
+call    1 never executed
+        -:   53:    }
+function _ZN4Book11Change_ISBNERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   54:    void Change_ISBN(const string& t){
+    #####:   55:        strcpy(ISBN, t.c_str());
+    %%%%%:   55-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   55-block  1
+    %%%%%:   55-block  2
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   55-block  3
+    #####:   56:    }
+function _ZN4Book11Change_NameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   57:    void Change_Name(const string& t){
+    #####:   58:        strcpy(Book_Name, t.c_str());
+    %%%%%:   58-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   58-block  1
+    %%%%%:   58-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   58-block  3
+    #####:   59:    }
+function _ZN4Book13Change_AuthorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   60:    void Change_Author(const string& t){
+    #####:   61:        strcpy(Author, t.c_str());
+    %%%%%:   61-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   61-block  1
+    %%%%%:   61-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   61-block  3
+    #####:   62:    }
+function _ZN4Book10Change_KeyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   63:    void Change_Key(const string& t){
+    #####:   64:        strcpy(Keyword, t.c_str());
+    %%%%%:   64-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   64-block  1
+    %%%%%:   64-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   64-block  3
+    #####:   65:    }
+function _ZN4Book12Change_PriceERKd called 0 returned 0% blocks executed 0%
+    #####:   66:    void Change_Price(const double& t){
+    #####:   67:        Price = t;
+    %%%%%:   67-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   68:    }
+function _ZN4BookaSERKS_ called 0 returned 0% blocks executed 0%
+    #####:   69:    Book& operator = (const Book& rhs){
+    #####:   70:        strcpy(ISBN, rhs.ISBN);
+    %%%%%:   70-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   70-block  1
+    %%%%%:   70-block  2
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   70-block  3
+    #####:   71:        strcpy(Book_Name, rhs.Book_Name);
+    %%%%%:   71-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   71-block  1
+    %%%%%:   71-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   71-block  3
+    #####:   72:        strcpy(Author, rhs.Author);
+    %%%%%:   72-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   72-block  1
+    %%%%%:   72-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   72-block  3
+    #####:   73:        strcpy(Keyword, rhs.Keyword);
+    %%%%%:   73-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   73-block  1
+    %%%%%:   73-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   73-block  3
+    #####:   74:        Quantity = rhs.Quantity;
+    %%%%%:   74-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:   75:        Price = rhs.Price;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:   76:        return *this;
+call    0 never executed
+        -:   77:    }
+        -:   78:    bool operator < (const Book& rhs){
+        -:   79:        int l_len = strlen(ISBN), r_len = strlen(rhs.ISBN), min_len;
+        -:   80:        min_len = l_len <= r_len ? l_len : r_len;
+        -:   81:        for(int i = 0; i < min_len; ++i)
+        -:   82:            if(ISBN[i] != rhs.ISBN[i])
+        -:   83:                return ISBN[i] < rhs.ISBN[i];
+        -:   84:        return l_len < r_len;
+        -:   85:    }
+function _ZlsRSoRK4Book called 0 returned 0% blocks executed 0%
+    #####:   86:    friend std::ostream& operator << (std::ostream& os, const Book& tmp){
+    #####:   87:        os << tmp.ISBN << "\t" << tmp.Book_Name << "\t" << tmp.Author << "\t" << tmp.Keyword <<"\t";
+    %%%%%:   87-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+call   15 never executed
+    #####:   88:        os << fixed << setprecision(2) << tmp.Price << "\t" << tmp.Quantity;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    #####:   89:        return os;
+        -:   90:    }
+        -:   91:};
+        -:   92:class Book_System{
+        -:   93:private:
+        -:   94:    Book Selected;
+        -:   95:    MemoryRiver<Book> Book_Data;
+        -:   96:    BlockList ISBN_Index;
+        -:   97:    BlockList Name_Index;
+        -:   98:    BlockList Author_Index;
+        -:   99:    BlockList Keyword_Index;
+        -:  100:public:
+function _ZN11Book_SystemC2Ev called 1 returned 100% blocks executed 55%
+        1:  101:    Book_System() : Book_Data("book_data"), ISBN_Index("ISBN_index"), Name_Index("name_index")
+        1:  101-block  0
+call    0 returned 1
+        1:  102:                    , Author_Index("author_index"), Keyword_Index("keyword_index"){}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  102-block  0
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  102-block  1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+branch 27 taken 1 (fallthrough)
+branch 28 taken 0 (throw)
+        1:  102-block  2
+call   29 returned 1
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:  102-block  3
+call   33 returned 1
+call   34 returned 1
+call   35 returned 1
+call   36 returned 1
+call   37 returned 1
+call   38 returned 1
+call   39 returned 1
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+branch 44 taken 1 (fallthrough)
+branch 45 taken 0 (throw)
+        1:  102-block  4
+call   46 returned 1
+call   47 returned 1
+branch 48 taken 1 (fallthrough)
+branch 49 taken 0 (throw)
+        1:  102-block  5
+call   50 returned 1
+call   51 returned 1
+call   52 returned 1
+call   53 returned 1
+call   54 returned 1
+call   55 returned 1
+call   56 returned 1
+call   57 returned 1
+call   58 returned 1
+call   59 returned 1
+call   60 returned 1
+branch 61 taken 1 (fallthrough)
+branch 62 taken 0 (throw)
+        1:  102-block  6
+call   63 returned 1
+call   64 returned 1
+branch 65 taken 1 (fallthrough)
+branch 66 taken 0 (throw)
+        1:  102-block  7
+call   67 returned 1
+call   68 returned 1
+call   69 returned 1
+call   70 returned 1
+call   71 returned 1
+call   72 returned 1
+call   73 returned 1
+call   74 returned 1
+call   75 returned 1
+call   76 returned 1
+call   77 returned 1
+branch 78 taken 1 (fallthrough)
+branch 79 taken 0 (throw)
+        1:  102-block  8
+call   80 returned 1
+call   81 returned 1
+branch 82 taken 1 (fallthrough)
+branch 83 taken 0 (throw)
+        1:  102-block  9
+call   84 returned 1
+call   85 returned 1
+call   86 returned 1
+call   87 returned 1
+    $$$$$:  102-block 10
+call   88 never executed
+    $$$$$:  102-block 11
+call   89 never executed
+    $$$$$:  102-block 12
+call   90 never executed
+    $$$$$:  102-block 13
+call   91 never executed
+    $$$$$:  102-block 14
+call   92 never executed
+    $$$$$:  102-block 15
+call   93 never executed
+    $$$$$:  102-block 16
+call   94 never executed
+    $$$$$:  102-block 17
+call   95 never executed
+    $$$$$:  102-block 18
+call   96 never executed
+    $$$$$:  102-block 19
+call   97 never executed
+    $$$$$:  102-block 20
+call   98 never executed
+    $$$$$:  102-block 21
+call   99 never executed
+    $$$$$:  102-block 22
+call   100 never executed
+    $$$$$:  102-block 23
+call   101 never executed
+    $$$$$:  102-block 24
+call   102 never executed
+    $$$$$:  102-block 25
+call   103 never executed
+    $$$$$:  102-block 26
+call   104 never executed
+    $$$$$:  102-block 27
+call   105 never executed
+    $$$$$:  102-block 28
+call   106 never executed
+    $$$$$:  102-block 29
+call   107 never executed
+    $$$$$:  102-block 30
+call   108 never executed
+call   109 never executed
+call   110 never executed
+call   111 never executed
+    $$$$$:  102-block 31
+call   112 never executed
+call   113 never executed
+call   114 never executed
+call   115 never executed
+    $$$$$:  102-block 32
+call   116 never executed
+call   117 never executed
+call   118 never executed
+call   119 never executed
+    $$$$$:  102-block 33
+call   120 never executed
+call   121 never executed
+call   122 never executed
+call   123 never executed
+function _ZN11Book_System12SplitKeywordERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorIS5_SaIS5_EE called 0 returned 0% blocks executed 0%
+    #####:  103:    void SplitKeyword(const string& str, vector<string>& ans){
+    #####:  104:        string tmp = "";
+    %%%%%:  104-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+    %%%%%:  104-block  1
+call    7 never executed
+    $$$$$:  104-block  2
+call    8 never executed
+    $$$$$:  104-block  3
+call    9 never executed
+    #####:  105:        for(int i = 0; i <= str.length(); ++i){
+    %%%%%:  105-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  105-block  1
+    #####:  106:            if(i == str.length() || str[i] == '|'){
+    %%%%%:  106-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  106-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  106-block  2
+    %%%%%:  106-block  3
+    %%%%%:  106-block  4
+branch  9 never executed
+branch 10 never executed
+    #####:  107:                ans.push_back(tmp);
+    %%%%%:  107-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  108:                tmp.clear();
+    %%%%%:  108-block  0
+call    0 never executed
+        -:  109:            }
+        -:  110:            else{
+    #####:  111:                tmp += str[i];
+    %%%%%:  111-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  112:            }
+        -:  113:        }
+    #####:  114:        return;
+    %%%%%:  114-block  0
+        -:  115:    }
+function _ZN11Book_System4ShowER14Account_System called 0 returned 0% blocks executed 0%
+    #####:  116:    void Show(Account_System& tmp_account) {
+    #####:  117:        if(tmp_account.Get_Now_Pri() < 1){
+    %%%%%:  117-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  118:            cout << "Invalid" << endl;
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  118-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  119:            return;
+    %%%%%:  119-block  0
+        -:  120:        }
+    #####:  121:        vector<int> ans;
+    %%%%%:  121-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  121-block  1
+call    2 never executed
+    #####:  122:        ISBN_Index.FindAll(ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  123:        Book tmp_book;
+    %%%%%:  123-block  0
+call    0 never executed
+call    1 never executed
+    #####:  124:        if(ans.empty()){//输出空行
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  125:            cout << endl;
+    %%%%%:  125-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  126:            return;
+    %%%%%:  126-block  0
+        -:  127:        }
+        -:  128:        else{
+    #####:  129:            for(int i = 0; i < ans.size(); ++i){
+    %%%%%:  129-block  0
+    %%%%%:  129-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  129-block  2
+    #####:  130:                Book_Data.read(tmp_book, ans[i]);
+    %%%%%:  130-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  131:                cout << tmp_book << endl;
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  131-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        -:  132:            }
+        -:  133:        }
+        -:  134:    }
+function _ZN11Book_System4ShowER14Account_SystemRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  135:    void Show(Account_System& tmp_account, const string& tmp_index){
+    #####:  136:        if(tmp_account.Get_Now_Pri() < 1){
+    %%%%%:  136-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  137:            cout << "Invalid" << endl;
+    %%%%%:  137-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  137-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  138:            return;
+    %%%%%:  138-block  0
+        -:  139:        }
+    #####:  140:        vector<int> ans;
+    %%%%%:  140-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  140-block  1
+call    2 never executed
+    #####:  141:        Book tmp_book;
+call    0 never executed
+call    1 never executed
+    #####:  142:        string index = "";
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+    $$$$$:  142-block  0
+call    7 never executed
+    $$$$$:  142-block  1
+call    8 never executed
+        -:  143:        int pos;
+    #####:  144:        for(int i = 0; i < tmp_index.size(); ++i){
+    %%%%%:  144-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  144-block  1
+    #####:  145:            if(tmp_index[i] == '='){
+    %%%%%:  145-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  146:                pos = i;
+    #####:  147:                break;
+    %%%%%:  147-block  0
+        -:  148:            }
+    #####:  149:            else index += tmp_index[i];
+    %%%%%:  149-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  150:        }
+    #####:  151:        string imf = "";
+    %%%%%:  151-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+    $$$$$:  151-block  1
+call    7 never executed
+    $$$$$:  151-block  2
+call    8 never executed
+    #####:  152:        if(index == "-ISBN"){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  153:            for(int i = pos + 1; i < tmp_index.size(); ++i){
+    %%%%%:  153-block  0
+    %%%%%:  153-block  1
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  153-block  2
+    #####:  154:                imf += tmp_index[i];
+    %%%%%:  154-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  155:            }
+        -:  156:        }
+        -:  157:        else{
+    #####:  158:            for(int i = pos + 2; i < tmp_index.size() - 1; ++i){
+    %%%%%:  158-block  0
+    %%%%%:  158-block  1
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  158-block  2
+    #####:  159:                imf += tmp_index[i];
+    %%%%%:  159-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  160:            }
+        -:  161:        }
+    #####:  162:        if(index == "-ISBN") {ISBN_Index.Find(imf, ans);}
+    %%%%%:  162-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  162-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  163:        if(index == "-name") {Name_Index.Find(imf, ans);}
+    %%%%%:  163-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  163-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  164:        if(index == "-author") {Author_Index.Find(imf, ans);}
+    %%%%%:  164-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  164-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  165:        if(index == "-keyword") {Keyword_Index.Find(imf, ans);}
+    %%%%%:  165-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  165-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  166:        if(ans.empty()){//输出空行
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  167:            cout << endl;
+    %%%%%:  167-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  168:            return;
+    %%%%%:  168-block  0
+        -:  169:        }
+        -:  170:        else{
+    #####:  171:            for(int i = 0; i < ans.size(); ++i){
+    %%%%%:  171-block  0
+    %%%%%:  171-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  171-block  2
+    #####:  172:                Book_Data.read(tmp_book, ans[i]);
+    %%%%%:  172-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  173:                cout << tmp_book << endl;
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  173-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        -:  174:            }
+        -:  175:        }
+        -:  176:    }
+function _ZN11Book_System3BuyER14Account_SystemNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKiRd called 0 returned 0% blocks executed 0%
+    #####:  177:    bool Buy(Account_System& tmp_account, const string tmp_ISBN, const int& tmp_q, double& tot){
+    #####:  178:        if(tmp_account.Get_Now_Pri() < 1 || Selected.Get_ISBN() == ""){
+    %%%%%:  178-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  178-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  178-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:  178-block  3
+    %%%%%:  178-block  4
+    %%%%%:  178-block  5
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  178-block  6
+call   15 never executed
+    %%%%%:  178-block  7
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  178-block  8
+call   18 never executed
+    %%%%%:  178-block  9
+branch 19 never executed
+branch 20 never executed
+    $$$$$:  178-block 10
+branch 21 never executed
+branch 22 never executed
+    $$$$$:  178-block 11
+call   23 never executed
+    $$$$$:  178-block 12
+branch 24 never executed
+branch 25 never executed
+    $$$$$:  178-block 13
+call   26 never executed
+    #####:  179:            cout << "Invalid" << endl;
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  179-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  180:            return false;
+    %%%%%:  180-block  0
+        -:  181:        }
+    #####:  182:        vector<int> ans;
+    %%%%%:  182-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  182-block  1
+call    2 never executed
+    $$$$$:  182-block  2
+call    3 never executed
+    #####:  183:        Book tmp_book;
+call    0 never executed
+call    1 never executed
+    #####:  184:        ISBN_Index.Find(tmp_ISBN, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  185:        if(ans.empty()){
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  186:            cout << "Invalid" << endl;
+    %%%%%:  186-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  186-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  187:            return false;
+    %%%%%:  187-block  0
+        -:  188:        }
+        -:  189:        else{
+    #####:  190:            Book_Data.read(tmp_book, ans[0]);
+    %%%%%:  190-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  191:            if(tmp_book.Get_Num() < tmp_q){
+    %%%%%:  191-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  192:                cout << "Invalid" << endl;
+    %%%%%:  192-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  192-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  193:                return false;
+    %%%%%:  193-block  0
+        -:  194:            }
+        -:  195:            else{
+    #####:  196:                tot = tmp_q * tmp_book.Get_Price();
+    %%%%%:  196-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  197:                tmp_book.Sub_Num(tmp_q);
+call    0 never executed
+    #####:  198:                cout << fixed << setprecision(2) << tot << endl;
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  198-block  0
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  198-block  1
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:  198-block  2
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    #####:  199:                Book_Data.update(tmp_book, ans[0]);
+    %%%%%:  199-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  200:                return true;
+    %%%%%:  200-block  0
+        -:  201:            }
+        -:  202:        }
+        -:  203:    }
+function _ZN11Book_System6SelectER14Account_SystemRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  204:    void Select(Account_System& tmp_account, const string& tmp_ISBN){
+        -:  205:        //3
+    #####:  206:        if(tmp_account.Get_Now_Pri() < 3){
+    %%%%%:  206-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  207:            //权限不够
+    #####:  208:            cout << "Invalid" << endl;
+    %%%%%:  208-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  208-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  209:            return;
+    %%%%%:  209-block  0
+        -:  210:        }
+    #####:  211:        vector<int> ans;
+    %%%%%:  211-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  211-block  1
+call    2 never executed
+    $$$$$:  211-block  2
+call    3 never executed
+    #####:  212:        ISBN_Index.Find(tmp_ISBN, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  213:        if(ans.empty()){//如果没有则创建
+    %%%%%:  213-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  214:            Selected = Book(tmp_ISBN);
+    %%%%%:  214-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  214-block  1
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+    #####:  215:            int pos = 0;
+call    0 never executed
+    #####:  216:            pos = Book_Data.write(Selected);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  217:            ISBN_Index.Insert(Node(tmp_ISBN, pos));
+    %%%%%:  217-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  217-block  1
+call    9 never executed
+    $$$$$:  217-block  2
+call   10 never executed
+        -:  218:        }
+        -:  219:        else{
+    #####:  220:            Book_Data.read(Selected, ans[0]);
+    %%%%%:  220-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+        -:  221:        }
+        -:  222:    }
+function _ZN11Book_System6ModifyER14Account_SystemRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  223:    void Modify(Account_System& tmp_account, const string& imf){
+        -:  224:        //notice:这里的imf已经确保为单操作指令，不用考虑修改多个信息的情况
+    #####:  225:        if(Selected.Get_ISBN() == ""){
+    %%%%%:  225-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  225-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  226:            cout << "Invalid" << endl;
+    %%%%%:  226-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  226-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  227:            return;
+    %%%%%:  227-block  0
+        -:  228:        }
+    #####:  229:        string ty = "", new_imf = "";
+    %%%%%:  229-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+    $$$$$:  229-block  1
+call   14 never executed
+    $$$$$:  229-block  2
+call   15 never executed
+    $$$$$:  229-block  3
+call   16 never executed
+    $$$$$:  229-block  4
+call   17 never executed
+    #####:  230:        int pos = 0;
+    #####:  231:        for(int i = 0; i < imf.length(); ++i){
+    %%%%%:  231-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  231-block  1
+    #####:  232:            if(imf[i] == '='){
+    %%%%%:  232-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  233:                pos = i;
+    #####:  234:                break;
+    %%%%%:  234-block  0
+        -:  235:            }
+    #####:  236:            else ty += imf[i];
+    %%%%%:  236-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  237:        }
+    #####:  238:        if(ty == "-ISBN" || ty == "-price"){
+    %%%%%:  238-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  238-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  238-block  2
+    %%%%%:  238-block  3
+    %%%%%:  238-block  4
+branch  6 never executed
+branch  7 never executed
+    #####:  239:            for(int i = pos + 1; i < imf.length(); ++i){
+    %%%%%:  239-block  0
+    %%%%%:  239-block  1
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  239-block  2
+    #####:  240:                new_imf += imf[i];
+    %%%%%:  240-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  241:            }
+        -:  242:        }
+        -:  243:        else{//去掉引号
+    #####:  244:            for(int i = pos + 2; i < imf.length() - 1; ++i){
+    %%%%%:  244-block  0
+    %%%%%:  244-block  1
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  244-block  2
+    #####:  245:                new_imf += imf[i];
+    %%%%%:  245-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  246:            }
+        -:  247:        }
+    #####:  248:        if(ty == "-ISBN"){
+    %%%%%:  248-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  249:            string old_isbn = Selected.Get_ISBN();
+    %%%%%:  249-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    $$$$$:  249-block  1
+call    6 never executed
+    #####:  250:            vector<int> old_ans, new_ans;
+    %%%%%:  250-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    %%%%%:  250-block  1
+call    4 never executed
+call    5 never executed
+    $$$$$:  250-block  2
+call    6 never executed
+    $$$$$:  250-block  3
+call    7 never executed
+    #####:  251:            ISBN_Index.Find(old_isbn, old_ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  252:            ISBN_Index.Find(new_imf, new_ans);
+    %%%%%:  252-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  253:            if(!new_ans.empty()){//与已有ISBN重复
+    %%%%%:  253-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  254:                cout << "Invalid" << endl;
+    %%%%%:  254-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  254-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  255:                return;
+    %%%%%:  255-block  0
+        -:  256:            }
+        -:  257:            else{
+    #####:  258:                int pos = old_ans[0];////数组越界
+    %%%%%:  258-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  259:                Selected.Change_ISBN(new_imf);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  260:                Book_Data.update(Selected, pos);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  261:                ISBN_Index.Delete(Node(old_isbn, pos));
+    %%%%%:  261-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  261-block  1
+call    9 never executed
+    $$$$$:  261-block  2
+call   10 never executed
+    #####:  262:                ISBN_Index.Insert(Node(new_imf, pos));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  262-block  0
+call    9 never executed
+    $$$$$:  262-block  1
+call   10 never executed
+    #####:  263:                return;
+call    0 never executed
+        -:  264:            }
+        -:  265:        }
+    #####:  266:        if(ty == "-name"){
+    %%%%%:  266-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  267:            string isbn = Selected.Get_ISBN(), old_name = Selected.Get_Name();
+    %%%%%:  267-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  267-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+call   10 never executed
+call   11 never executed
+    $$$$$:  267-block  2
+call   12 never executed
+    $$$$$:  267-block  3
+call   13 never executed
+    #####:  268:            vector<int> ans;
+    %%%%%:  268-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  268-block  1
+call    2 never executed
+    #####:  269:            int pos = 0;
+call    0 never executed
+    #####:  270:            ISBN_Index.Find(isbn, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  271:            pos = ans[0];
+    %%%%%:  271-block  0
+call    0 never executed
+call    1 never executed
+    #####:  272:            Selected.Change_Name(new_imf);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  273:            Book_Data.update(Selected, pos);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  274:            Name_Index.Delete(Node(old_name, pos));
+    %%%%%:  274-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  274-block  1
+call    9 never executed
+    $$$$$:  274-block  2
+call   10 never executed
+    #####:  275:            Name_Index.Insert(Node(new_imf, pos));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  275-block  0
+call    9 never executed
+    $$$$$:  275-block  1
+call   10 never executed
+    #####:  276:            return;
+call    0 never executed
+        -:  277:        }
+    #####:  278:        if(ty == "-author"){
+    %%%%%:  278-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  279:            string isbn = Selected.Get_ISBN(), old_author = Selected.Get_Author();
+    %%%%%:  279-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  279-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+call   10 never executed
+call   11 never executed
+    $$$$$:  279-block  2
+call   12 never executed
+    $$$$$:  279-block  3
+call   13 never executed
+    #####:  280:            vector<int> ans;
+    %%%%%:  280-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  280-block  1
+call    2 never executed
+    #####:  281:            int pos = 0;
+call    0 never executed
+    #####:  282:            ISBN_Index.Find(isbn, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  283:            pos = ans[0];
+    %%%%%:  283-block  0
+call    0 never executed
+call    1 never executed
+    #####:  284:            Selected.Change_Author(new_imf);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  285:            Book_Data.update(Selected, pos);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  286:            Author_Index.Delete(Node(old_author, pos));
+    %%%%%:  286-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  286-block  1
+call    9 never executed
+    $$$$$:  286-block  2
+call   10 never executed
+    #####:  287:            Author_Index.Insert(Node(new_imf, pos));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  287-block  0
+call    9 never executed
+    $$$$$:  287-block  1
+call   10 never executed
+    #####:  288:            return;
+call    0 never executed
+        -:  289:        }
+    #####:  290:        if(ty == "-keyword"){
+    %%%%%:  290-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  291:            string isbn = Selected.Get_ISBN();
+    %%%%%:  291-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    $$$$$:  291-block  1
+call    6 never executed
+    #####:  292:            int pos;
+    %%%%%:  292-block  0
+call    0 never executed
+    #####:  293:            vector<int> ans;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:  293-block  0
+call    3 never executed
+    #####:  294:            vector<string> old_key, new_key;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    $$$$$:  294-block  0
+call    5 never executed
+    $$$$$:  294-block  1
+call    6 never executed
+    #####:  295:            ISBN_Index.Find(isbn, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  296:            pos = ans[0];
+    %%%%%:  296-block  0
+call    0 never executed
+call    1 never executed
+    #####:  297:            SplitKeyword(Selected.Get_Key(), old_key);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  297-block  0
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  297-block  1
+call   10 never executed
+call   11 never executed
+    $$$$$:  297-block  2
+call   12 never executed
+    $$$$$:  297-block  3
+call   13 never executed
+    #####:  298:            SplitKeyword(new_imf, new_key);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  299:            Selected.Change_Key(new_imf);
+    %%%%%:  299-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  300:            Book_Data.update(Selected, pos);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  301:            for(int i = 0; i < old_key.size(); ++i){
+    %%%%%:  301-block  0
+    %%%%%:  301-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  302:                Keyword_Index.Delete(Node(old_key[i], pos));
+    %%%%%:  302-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  302-block  1
+call   11 never executed
+    $$$$$:  302-block  2
+call   12 never executed
+        -:  303:            }
+    #####:  304:            for(int i = 0; i < new_key.size(); ++i){
+    %%%%%:  304-block  0
+    %%%%%:  304-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  305:                Keyword_Index.Insert(Node(new_key[i], pos));
+    %%%%%:  305-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  305-block  1
+call   11 never executed
+    $$$$$:  305-block  2
+call   12 never executed
+        -:  306:            }
+    #####:  307:            return;
+    %%%%%:  307-block  0
+call    0 never executed
+        -:  308:        }
+    #####:  309:        if(ty == "-price"){
+    %%%%%:  309-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  310:            string isbn = Selected.Get_ISBN();
+    %%%%%:  310-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    $$$$$:  310-block  1
+call    6 never executed
+    #####:  311:            vector<int> ans;
+    %%%%%:  311-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  311-block  1
+call    2 never executed
+    #####:  312:            double new_price = std::stod(new_imf);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  313:            ISBN_Index.Find(isbn, ans);
+    %%%%%:  313-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  314:            pos = ans[0];
+    %%%%%:  314-block  0
+call    0 never executed
+call    1 never executed
+    #####:  315:            Selected.Change_Price(new_price);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  316:            Book_Data.update(Selected, pos);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  317:            return;
+    %%%%%:  317-block  0
+call    0 never executed
+        -:  318:        }
+        -:  319:    }
+function _ZN11Book_System6ImportER14Account_SystemRKiRKd called 0 returned 0% blocks executed 0%
+    #####:  320:    bool Import(Account_System& tmp_account, const int& tmp_q, const double& tmp_tot){
+    #####:  321:        if(tmp_account.Get_Now_Pri() < 3 || Selected.Get_ISBN() == ""){
+    %%%%%:  321-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  321-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  321-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:  321-block  3
+    %%%%%:  321-block  4
+    %%%%%:  321-block  5
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  321-block  6
+call   15 never executed
+    %%%%%:  321-block  7
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  321-block  8
+call   18 never executed
+    %%%%%:  321-block  9
+branch 19 never executed
+branch 20 never executed
+    $$$$$:  321-block 10
+branch 21 never executed
+branch 22 never executed
+    $$$$$:  321-block 11
+call   23 never executed
+    $$$$$:  321-block 12
+branch 24 never executed
+branch 25 never executed
+    $$$$$:  321-block 13
+call   26 never executed
+    #####:  322:            cout << "Invalid" << endl;
+    %%%%%:  322-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  323:            return false;
+        -:  324:        }
+        -:  325:        else{
+    #####:  326:            vector<int> ans;
+    %%%%%:  326-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  326-block  1
+call    2 never executed
+    #####:  327:            ISBN_Index.Find(Selected.Get_ISBN(), ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  327-block  0
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  327-block  1
+call   12 never executed
+call   13 never executed
+    $$$$$:  327-block  2
+call   14 never executed
+    $$$$$:  327-block  3
+call   15 never executed
+    #####:  328:            Selected.Add_Num(tmp_q);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  329:            Book_Data.update(Selected, ans[0]);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  330:            return true;
+    %%%%%:  330-block  0
+call    0 never executed
+        -:  331:        }
+        -:  332:    }
+        -:  333:};
+        -:  334:
+        -:  335:#endif //BOOKSTORE_BOOKS_H

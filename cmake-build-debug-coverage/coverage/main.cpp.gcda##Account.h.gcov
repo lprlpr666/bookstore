@@ -1,0 +1,982 @@
+        -:    0:Source:/mnt/d/周秉霖/Bookstore/Account.h
+        -:    0:Graph:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by zbl on 2021/12/18.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef BOOKSTORE_ACCOUNT_H
+        -:    6:#define BOOKSTORE_ACCOUNT_H
+        -:    7:
+        -:    8:#include <stack>
+        -:    9:#include <iostream>
+        -:   10:#include <string>
+        -:   11:#include "Blocks.h"
+        -:   12:
+        -:   13:using std::cin;
+        -:   14:using std::string;
+        -:   15:using std::cout;
+        -:   16:using std::endl;
+        -:   17:using std::stack;
+        -:   18:
+        -:   19:struct User_Account{
+        -:   20:    char User_ID[32] = "";
+        -:   21:    char User_Name[32] = "";
+        -:   22:    char PassWord[32] = "";
+        -:   23:    int Priority = 0; //默认为0
+        -:   24:    User_Account() = default;
+function _ZN12User_AccountC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_RKiS5_ called 9 returned 100% blocks executed 82%
+        9:   25:    User_Account(const string& tmp_ID, const string& tmp_PW, const int& tmp_p, const string tmp_name = ""){
+        9:   25-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+       9*:   26:        strcpy(User_ID, tmp_ID.c_str());
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+branch  3 taken 0 (fallthrough)
+branch  4 taken 9
+    %%%%%:   26-block  0
+        9:   26-block  1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 9
+    %%%%%:   26-block  2
+       9*:   27:        strcpy(User_Name, tmp_name.c_str());
+        9:   27-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+branch  3 taken 0 (fallthrough)
+branch  4 taken 9
+    %%%%%:   27-block  1
+        9:   27-block  2
+branch  5 taken 0 (fallthrough)
+branch  6 taken 9
+    %%%%%:   27-block  3
+       9*:   28:        strcpy(PassWord, tmp_PW.c_str());
+        9:   28-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+branch  4 taken 0 (fallthrough)
+branch  5 taken 9
+    %%%%%:   28-block  1
+        9:   28-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 9
+    %%%%%:   28-block  3
+        9:   29:        Priority = tmp_p;
+        9:   29-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+        9:   30:    }
+        -:   31:};
+        -:   32:
+        -:   33:class Account_System{
+        -:   34:private:
+        -:   35:    vector<User_Account> Log_Stack;
+        -:   36:    BlockList Account_Index;//存储信息在存储文件中的位置
+        -:   37:    MemoryRiver<User_Account> Account_Data;//存储账户信息
+        -:   38:public:
+function _ZN14Account_SystemC2Ev called 1 returned 100% blocks executed 57%
+        1:   39:    Account_System(): Account_Index("account_index"), Account_Data("account_data"){}
+        1:   39-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   39-block  1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:   39-block  2
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   39-block  3
+call   30 returned 1
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0 (throw)
+        1:   39-block  4
+call   34 returned 1
+call   35 returned 1
+call   36 returned 1
+call   37 returned 1
+    $$$$$:   39-block  5
+call   38 never executed
+    $$$$$:   39-block  6
+call   39 never executed
+    $$$$$:   39-block  7
+call   40 never executed
+    $$$$$:   39-block  8
+call   41 never executed
+    $$$$$:   39-block  9
+call   42 never executed
+    $$$$$:   39-block 10
+call   43 never executed
+    $$$$$:   39-block 11
+call   44 never executed
+    $$$$$:   39-block 12
+call   45 never executed
+    $$$$$:   39-block 13
+call   46 never executed
+call   47 never executed
+call   48 never executed
+call   49 never executed
+    $$$$$:   39-block 14
+call   50 never executed
+call   51 never executed
+call   52 never executed
+        -:   40:    //for de_bug:
+        -:   41:    void Get_Size(){
+        -:   42:        cout << "Size: " << Log_Stack.size() << endl;
+        -:   43:    }
+function _ZN14Account_System4initEv called 1 returned 100% blocks executed 62%
+        1:   44:    void init(){//创建超级用户
+        2:   45:        vector<int> tmp;
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   45-block  1
+call    2 returned 1
+    $$$$$:   45-block  2
+call    3 never executed
+        1:   46:        Account_Index.Find("root", tmp);
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   46-block  0
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   46-block  1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+    $$$$$:   46-block  2
+call   17 never executed
+    $$$$$:   46-block  3
+call   18 never executed
+    $$$$$:   46-block  4
+call   19 never executed
+    $$$$$:   46-block  5
+call   20 never executed
+        1:   47:        if(tmp.empty()){
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   48:            User_Account rt("root", "sjtu", 7);
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   48-block  1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   48-block  2
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:   48-block  3
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+call   27 returned 1
+call   28 returned 1
+call   29 returned 1
+call   30 returned 1
+call   31 returned 1
+call   32 returned 1
+call   33 returned 1
+call   34 returned 1
+call   35 returned 1
+call   36 returned 1
+    $$$$$:   48-block  4
+call   37 never executed
+    $$$$$:   48-block  5
+call   38 never executed
+    $$$$$:   48-block  6
+call   39 never executed
+    $$$$$:   48-block  7
+call   40 never executed
+    $$$$$:   48-block  8
+call   41 never executed
+    $$$$$:   48-block  9
+call   42 never executed
+    $$$$$:   48-block 10
+call   43 never executed
+    $$$$$:   48-block 11
+call   44 never executed
+    $$$$$:   48-block 12
+call   45 never executed
+    $$$$$:   48-block 13
+call   46 never executed
+    $$$$$:   48-block 14
+call   47 never executed
+        1:   49:            int pos = 0;
+call    0 returned 1
+        1:   50:            pos = Account_Data.write(rt);
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   51:            Account_Index.Insert(Node("root", pos));
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   51-block  1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   51-block  2
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   51-block  3
+call   21 never executed
+    $$$$$:   51-block  4
+call   22 never executed
+    $$$$$:   51-block  5
+call   23 never executed
+    $$$$$:   51-block  6
+call   24 never executed
+    $$$$$:   51-block  7
+call   25 never executed
+        -:   52:        }
+        1:   53:    }
+function _ZN14Account_System11Get_Now_PriEv called 0 returned 0% blocks executed 0%
+    #####:   54:    int Get_Now_Pri(){
+    #####:   55:        if(Log_Stack.empty()) return 0;
+    %%%%%:   55-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   55-block  1
+    #####:   56:        return Log_Stack.back().Priority;
+    %%%%%:   56-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:   57:    }
+function _ZN14Account_System4QuitEv called 1 returned 100% blocks executed 56%
+        1:   58:    void Quit(){
+       1*:   59:        while(!Log_Stack.empty())
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    #####:   60:            Log_Stack.pop_back();
+    %%%%%:   60-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        1:   61:    }
+function _ZN14Account_System5LoginERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 10 returned 100% blocks executed 56%
+       10:   62:    void Login(const string& tmp_ID, const string& tmp_Password){
+        -:   63:        //0
+       10:   64:        vector<int> tmp;
+       10:   64-block  0
+call    0 returned 10
+call    1 returned 10
+    $$$$$:   64-block  1
+call    2 never executed
+       10:   65:        User_Account Selected;
+call    0 returned 10
+       10:   66:        Account_Index.Find(tmp_ID, tmp);
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   67:        if(tmp.empty()){
+       10:   67-block  0
+call    0 returned 10
+branch  1 taken 0 (fallthrough)
+branch  2 taken 10
+    #####:   68:            cout << "Invalid" << endl;
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   68-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   69:            return;
+    %%%%%:   69-block  0
+        -:   70:        }
+       10:   71:        Account_Data.read(Selected, tmp[0]);
+       10:   71-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+branch  6 taken 10 (fallthrough)
+branch  7 taken 0 (throw)
+      10*:   72:        if(!Log_Stack.empty() && Log_Stack.back().Priority > Selected.Priority){
+       10:   72-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 0 (fallthrough)
+branch  4 taken 10
+    %%%%%:   72-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   72-block  2
+       10:   72-block  3
+       10:   72-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 10
+    #####:   73:            Log_Stack.push_back(Selected);
+    %%%%%:   73-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   74:            return;
+    %%%%%:   74-block  0
+        -:   75:        }
+       10:   76:        if(tmp_Password == Selected.PassWord){
+       10:   76-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0
+       10:   77:            Log_Stack.push_back(Selected);
+       10:   77-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 10 (fallthrough)
+branch  4 taken 0 (throw)
+       10:   78:            return;
+       10:   78-block  0
+        -:   79:        }
+        -:   80:        else{
+    #####:   81:            cout << "Invalid" << endl;
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   81-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        -:   82:        }
+        -:   83:    }
+function _ZN14Account_System6LogoutEv called 10 returned 100% blocks executed 57%
+       10:   84:    void Logout(){
+        -:   85:        //1
+       10:   86:        if(Log_Stack.empty()){
+       10:   86-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 0 (fallthrough)
+branch  4 taken 10
+    #####:   87:            cout << "Invalid" << endl;
+    %%%%%:   87-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   88:            return;
+        -:   89:        }
+       10:   90:        Log_Stack.pop_back();
+       10:   90-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+        -:   91:    }
+function _ZN14Account_System8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_ called 3 returned 100% blocks executed 74%
+        3:   92:    void Register(const string& tmp_ID, const string& tmp_Password, const string& tmp_Name){
+        -:   93:        //0
+        -:   94:        //注册的账户的权限等级为1
+        3:   95:        vector<int> ans;
+        3:   95-block  0
+call    0 returned 3
+call    1 returned 3
+    $$$$$:   95-block  1
+call    2 never executed
+        3:   96:        Account_Index.Find(tmp_ID, ans);
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   97:        if(!ans.empty()){
+        3:   97-block  0
+call    0 returned 3
+branch  1 taken 0 (fallthrough)
+branch  2 taken 3
+        -:   98:            //重复的ID，注册失败
+    #####:   99:            cout << "Invalid" << endl;
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   99-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  100:            return;
+    %%%%%:  100-block  0
+        -:  101:        }
+        3:  102:        User_Account new_account(tmp_ID, tmp_Password, 1, tmp_Name);
+        3:  102-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  102-block  1
+call    6 returned 3
+call    7 returned 3
+call    8 returned 3
+call    9 returned 3
+call   10 returned 3
+call   11 returned 3
+        3:  103:        int pos = Account_Data.write(new_account);
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:  104:        Account_Index.Insert(Node(tmp_ID, pos));
+        3:  104-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+call    5 returned 3
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:  104-block  1
+call    9 returned 3
+    $$$$$:  104-block  2
+call   10 never executed
+        -:  105:    }
+function _ZN14Account_System6PasswdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_ called 0 returned 0% blocks executed 0%
+    #####:  106:    void Passwd(const string& tmp_ID, const string& tmp_NPW, const string& tmp_OPW){
+        -:  107:        //1
+    #####:  108:        if(Log_Stack.empty() || Log_Stack.back().Priority < 1){
+    %%%%%:  108-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  108-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  108-block  2
+    %%%%%:  108-block  3
+    %%%%%:  108-block  4
+branch 12 never executed
+branch 13 never executed
+        -:  109:            //权限不够
+    #####:  110:            cout << "Invalid" << endl;
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  110-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  111:            return;
+    %%%%%:  111-block  0
+        -:  112:        }
+    #####:  113:        vector<int> ans;
+    %%%%%:  113-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  113-block  1
+call    2 never executed
+    #####:  114:        User_Account Selected;
+call    0 never executed
+    #####:  115:        Account_Index.Find(tmp_ID, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  116:        if(ans.empty()){
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  117:            //账户不存在
+    #####:  118:            cout << "Invalid" << endl;
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  118-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  119:            return;
+    %%%%%:  119-block  0
+        -:  120:        }
+    #####:  121:        Account_Data.read(Selected, ans[0]);
+    %%%%%:  121-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  122:        if(Log_Stack.back().Priority == 7){//超级用户
+    %%%%%:  122-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  123:            strcpy(Selected.PassWord, tmp_NPW.c_str());
+    %%%%%:  123-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  123-block  1
+    %%%%%:  123-block  2
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  123-block  3
+    #####:  124:            Account_Data.update(Selected, ans[0]);
+    %%%%%:  124-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:  125:        }
+        -:  126:        else{//非超级用户
+    #####:  127:            if(tmp_OPW != Selected.PassWord){
+    %%%%%:  127-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  128:                //密码不正确
+    #####:  129:                cout << "Invalid" << endl;
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  129-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  130:                return;
+    %%%%%:  130-block  0
+        -:  131:            }
+        -:  132:            else{
+    #####:  133:                strcpy(Selected.PassWord, tmp_NPW.c_str());
+    %%%%%:  133-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  133-block  1
+    %%%%%:  133-block  2
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  133-block  3
+    #####:  134:                Account_Data.update(Selected, ans[0]);
+    %%%%%:  134-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:  135:            }
+        -:  136:        }
+        -:  137:    }
+function _ZN14Account_System7UseraddERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_RKiS7_ called 5 returned 100% blocks executed 70%
+        5:  138:    void Useradd(const string& tmp_ID, const string& tmp_PW, const int& tmp_Pri, const string& tmp_Name){
+        -:  139:        //3
+        -:  140:        //注意：创建用户的权限要小于当前账户
+        5:  141:        vector<int> ans;
+        5:  141-block  0
+call    0 returned 5
+call    1 returned 5
+    $$$$$:  141-block  1
+call    2 never executed
+        5:  142:        Account_Index.Find(tmp_ID, ans);
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:  143:        if(!ans.empty()){
+        5:  143-block  0
+call    0 returned 5
+branch  1 taken 0 (fallthrough)
+branch  2 taken 5
+        -:  144:            //用户名重复
+    #####:  145:            cout << "Invalid" << endl;
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  145-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  146:            return;
+    %%%%%:  146-block  0
+        -:  147:        }
+       5*:  148:        if(Log_Stack.empty() || Log_Stack.back().Priority <= tmp_Pri){
+        5:  148-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+branch  3 taken 5 (fallthrough)
+branch  4 taken 0
+        5:  148-block  1
+call    5 returned 5
+call    6 returned 5
+call    7 returned 5
+call    8 returned 5
+call    9 returned 5
+call   10 returned 5
+branch 11 taken 0 (fallthrough)
+branch 12 taken 5
+    %%%%%:  148-block  2
+        5:  148-block  3
+        5:  148-block  4
+branch 13 taken 0 (fallthrough)
+branch 14 taken 5
+        -:  149:            //权限不够
+    #####:  150:            cout << "Invalid" << endl;
+    %%%%%:  150-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  150-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  151:            return;
+    %%%%%:  151-block  0
+        -:  152:        }
+        5:  153:        User_Account new_account(tmp_ID, tmp_PW, tmp_Pri, tmp_Name);
+        5:  153-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:  153-block  1
+call    6 returned 5
+call    7 returned 5
+call    8 returned 5
+        5:  154:        int pos = Account_Data.write(new_account);
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:  155:        Account_Index.Insert(Node(tmp_ID, pos));
+        5:  155-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+branch  7 taken 5 (fallthrough)
+branch  8 taken 0 (throw)
+        5:  155-block  1
+call    9 returned 5
+    $$$$$:  155-block  2
+call   10 never executed
+        -:  156:    }
+function _ZN14Account_System6DeleteERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  157:    void Delete(const string& tmp_ID){
+        -:  158:        //7
+    #####:  159:        if(Log_Stack.empty() || Log_Stack.back().Priority < 7){
+    %%%%%:  159-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  159-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  159-block  2
+    %%%%%:  159-block  3
+    %%%%%:  159-block  4
+branch 12 never executed
+branch 13 never executed
+        -:  160:            //权限不够
+    #####:  161:            cout << "Invalid" << endl;
+    %%%%%:  161-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  161-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  162:            return;
+    %%%%%:  162-block  0
+        -:  163:        }
+    #####:  164:        vector<int> ans;
+    %%%%%:  164-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  164-block  1
+call    2 never executed
+    #####:  165:        Account_Index.Find(tmp_ID, ans);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  166:        if(ans.empty()){
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  167:            //账户不存在
+    #####:  168:            cout << "Invalid" << endl;
+    %%%%%:  168-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  168-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  169:            return;
+    %%%%%:  169-block  0
+        -:  170:        }
+    #####:  171:        bool flag = 0;
+    #####:  172:        for(int i = 0; i < Log_Stack.size(); ++i){
+    %%%%%:  172-block  0
+    %%%%%:  172-block  1
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  172-block  2
+    #####:  173:            if(Log_Stack[i].User_ID == tmp_ID){
+    %%%%%:  173-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  174:                flag = 1;
+    #####:  175:                break;
+    %%%%%:  175-block  0
+        -:  176:            }
+        -:  177:        }
+    #####:  178:        if(flag){
+    %%%%%:  178-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  179:            //正在登录栈中
+    #####:  180:            cout << "Invalid" << endl;
+    %%%%%:  180-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  180-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  181:            return;
+    %%%%%:  181-block  0
+        -:  182:        }
+    #####:  183:        Account_Index.Delete(Node(tmp_ID, ans[0]));
+    %%%%%:  183-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  183-block  1
+call   11 never executed
+    $$$$$:  183-block  2
+call   12 never executed
+    #####:  184:        Account_Data.Delete(ans[0]);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:  185:    }
+        -:  186:};
+        -:  187:
+        -:  188:#endif //BOOKSTORE_ACCOUNT_H

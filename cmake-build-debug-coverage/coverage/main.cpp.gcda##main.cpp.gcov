@@ -1,0 +1,121 @@
+        -:    0:Source:/mnt/d/周秉霖/Bookstore/main.cpp
+        -:    0:Graph:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <string>
+        -:    3:#include "Command.h"
+        -:    4:using std::string;
+function main called 1 returned 100% blocks executed 80%
+        1:    5:int main(){
+        1:    6:    freopen("testcase1.txt","r",stdin);
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    7:    freopen("Myans.txt","w",stdout);
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    8:    Command System;
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:    8-block  1
+call    5 never executed
+        1:    9:    string cmd;
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:    9-block  1
+call    2 never executed
+        -:   10:
+        -:   11://    int cnt = 0;
+        -:   12:
+       30:   13:    while(getline(cin, cmd)){
+       30:   13-block  0
+call    0 returned 30
+branch  1 taken 30 (fallthrough)
+branch  2 taken 0 (throw)
+       30:   13-block  1
+call    3 returned 30
+call    4 returned 30
+call    5 returned 30
+call    6 returned 30
+call    7 returned 30
+call    8 returned 30
+call    9 returned 30
+call   10 returned 30
+call   11 returned 30
+call   12 returned 30
+call   13 returned 30
+call   14 returned 30
+call   15 returned 30
+call   16 returned 30
+call   17 returned 30
+call   18 returned 30
+call   19 returned 30
+call   20 returned 30
+call   21 returned 30
+call   22 returned 30
+call   23 returned 30
+call   24 returned 30
+call   25 returned 30
+call   26 returned 30
+call   27 returned 30
+call   28 returned 30
+call   29 returned 30
+call   30 returned 30
+branch 31 taken 30 (fallthrough)
+branch 32 taken 0 (throw)
+       30:   13-block  2
+branch 33 taken 29 (fallthrough)
+branch 34 taken 1
+       29:   13-block  3
+        -:   14:        //对于每一条指令，先解析，再执行
+        -:   15://        cnt++;
+        -:   16://        cout << cnt << endl;
+      29*:   17:        if(cmd.length() > 1024){//单次指令最大为1024
+       29:   17-block  0
+call    0 returned 29
+branch  1 taken 0 (fallthrough)
+branch  2 taken 29
+    #####:   18:            cout << "Invalid" << endl;
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   18-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   19:            continue;
+    %%%%%:   19-block  0
+        -:   20:        }
+       29:   21:        System.pre(cmd);
+       29:   21-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   22:        System.get_cmd(cmd);
+       29:   22-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   23:        System.run();
+       29:   23-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   24:    }
+        1:   25:    return 0;
+        1:   25-block  0
+call    0 returned 1
+        -:   26:}

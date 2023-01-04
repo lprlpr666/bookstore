@@ -1,0 +1,355 @@
+        -:    0:Source:/mnt/d/周秉霖/Bookstore/Log.h
+        -:    0:Graph:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by zbl on 2021/12/26.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef BOOKSTORE_LOG_H
+        -:    6:#define BOOKSTORE_LOG_H
+        -:    7:
+        -:    8:#include <iostream>
+        -:    9:#include <iomanip>
+        -:   10:
+        -:   11:class FinanceLog{//一个对象表示一次交易
+        -:   12:private:
+        -:   13:    bool ty = 0;//表示buy or import 0表示buy(收入)， 1表示import(支出)
+        -:   14:    double tot = 0;//正数，该笔交易额
+        -:   15:public:
+function _ZN10FinanceLog6Get_tyEv called 0 returned 0% blocks executed 0%
+    #####:   16:    bool Get_ty(){
+    #####:   17:        return ty;
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   17-block  1
+    %%%%%:   17-block  2
+        -:   18:    }
+function _ZN10FinanceLog7Get_totEv called 0 returned 0% blocks executed 0%
+    #####:   19:    double Get_tot(){
+    #####:   20:        return tot;
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+        -:   21:    }
+function _ZN10FinanceLogC2Ev called 1 returned 100% blocks executed 100%
+        1:   22:    FinanceLog() = default;
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+function _ZN10FinanceLogC2ERKbRKd called 0 returned 0% blocks executed 0%
+    #####:   23:    FinanceLog(const bool& type, const double& num):ty(type), tot(num){}
+    %%%%%:   23-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   23-block  1
+    %%%%%:   23-block  2
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+function _ZN10FinanceLogaSERKS_ called 0 returned 0% blocks executed 0%
+    #####:   24:    FinanceLog& operator = (const FinanceLog& rhs){
+    #####:   25:        ty = rhs.ty;
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   25-block  1
+    %%%%%:   25-block  2
+call    3 never executed
+    #####:   26:        tot = rhs.tot;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:   27:        return *this;
+call    0 never executed
+        -:   28:    }
+        -:   29:};
+        -:   30:class Log_System{
+        -:   31:private:
+        -:   32:    int tot_time;
+        -:   33:    FinanceLog cur;
+        -:   34:    MemoryRiver<FinanceLog> Log_Data;
+        -:   35:    int sizeofF = sizeof(FinanceLog);
+        -:   36:public:
+function _ZN10Log_SystemC2Ev called 1 returned 100% blocks executed 76%
+        1:   37:    Log_System():Log_Data("log_data"){}
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:   37-block  1
+call   14 returned 1
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   37-block  2
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+    $$$$$:   37-block  3
+call   24 never executed
+    $$$$$:   37-block  4
+call   25 never executed
+    $$$$$:   37-block  5
+call   26 never executed
+    $$$$$:   37-block  6
+call   27 never executed
+function _ZN10Log_System4showEv called 0 returned 0% blocks executed 0%
+    #####:   38:    void show(){
+    #####:   39:        double income = 0, outcome = 0;
+    #####:   40:        Log_Data.get_info(tot_time, 1);
+    %%%%%:   40-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:   41:        for(int i = 8; i <= 8 + (tot_time - 1) * sizeofF; i += sizeofF){
+    %%%%%:   41-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   41-block  1
+call    5 never executed
+call    6 never executed
+    #####:   42:            Log_Data.read(cur, i);
+    %%%%%:   42-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    #####:   43:            if(!cur.Get_ty()){
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   44:                income += cur.Get_tot();
+    %%%%%:   44-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   45:            }
+        -:   46:            else{
+    #####:   47:                outcome += cur.Get_tot();
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   48:            }
+        -:   49:        }
+    #####:   50:        cout << fixed << std::setprecision(2)<< "+ " << income << " - " << outcome << endl;
+    %%%%%:   50-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+    #####:   51:    }
+function _ZN10Log_System4showERKi called 0 returned 0% blocks executed 0%
+    #####:   52:    void show(const int& num){
+    #####:   53:        if(!num){
+    %%%%%:   53-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   54:            cout << endl;
+    %%%%%:   54-block  0
+call    0 never executed
+call    1 never executed
+    #####:   55:            return;
+        -:   56:        }
+    #####:   57:        double income = 0, outcome = 0;
+    #####:   58:        Log_Data.get_info(tot_time, 1);
+    %%%%%:   58-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:   59:        if(num > tot_time){
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   60:            cout << "Invalid" << endl;
+    %%%%%:   60-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   61:            return;
+        -:   62:        }
+    #####:   63:        for(int i = 8 + (tot_time - 1) * sizeofF; i >= 8 + (tot_time - num) * sizeofF; i -= sizeofF){
+    %%%%%:   63-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    %%%%%:   63-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   63-block  2
+call    9 never executed
+call   10 never executed
+    #####:   64:            Log_Data.read(cur, i);
+    %%%%%:   64-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    #####:   65:            if(!cur.Get_ty()){
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   66:                income += cur.Get_tot();
+    %%%%%:   66-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   67:            }
+        -:   68:            else{
+    #####:   69:                outcome += cur.Get_tot();
+    %%%%%:   69-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   70:            }
+        -:   71:        }
+    #####:   72:        cout << fixed << std::setprecision(2)<< "+ " << income << " - " << outcome << endl;
+    %%%%%:   72-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+        -:   73:    }
+function _ZN10Log_System11add_financeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKd called 0 returned 0% blocks executed 0%
+    #####:   74:    void add_finance(const string& type, const double& num){
+    #####:   75:        if(type == "buy"){
+    %%%%%:   75-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   76:            cur = FinanceLog(0, num);
+    %%%%%:   76-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+    #####:   77:            Log_Data.write(cur);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        -:   78:        }
+        -:   79:        else{
+    #####:   80:            cur = FinanceLog(1, num);
+    %%%%%:   80-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+    #####:   81:            Log_Data.write(cur);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        -:   82:        }
+    #####:   83:    }
+        -:   84:};
+        -:   85:
+        -:   86:#endif //BOOKSTORE_LOG_H

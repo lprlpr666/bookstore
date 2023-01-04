@@ -1,0 +1,2872 @@
+        -:    0:Source:/mnt/d/周秉霖/Bookstore/Blocks.h
+        -:    0:Graph:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/周秉霖/Bookstore/cmake-build-debug-coverage/CMakeFiles/Bookstore.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by zbl on 2021/12/18.
+        -:    3://
+        -:    4:
+        -:    5://实现了文件中的 map<string, T>
+        -:    6://T可为任意类型,并不局限于int
+        -:    7:
+        -:    8:#ifndef BOOKSTORE_BLOCKS_H
+        -:    9:#define BOOKSTORE_BLOCKS_H
+        -:   10:#include <iostream>
+        -:   11:#include <vector>
+        -:   12:#include <cstdio>
+        -:   13:#include <algorithm>
+        -:   14:#include <cstring>
+        -:   15:#include <cmath>
+        -:   16:#include <fstream>
+        -:   17:
+        -:   18:using std::cin;
+        -:   19:using std::cout;
+        -:   20:using std::endl;
+        -:   21:using std::string;
+        -:   22:using std::vector;
+        -:   23:using std::fstream;
+        -:   24:
+        -:   25:const int MaxLen = 65;
+        -:   26:const int MaxBlockLen = 1000;
+        -:   27:const int ApartLen = 1500;
+        -:   28:const int MergeLen = 500;
+        -:   29:
+        -:   30:template<class T, int info_len = 2>
+        -:   31:class MemoryRiver {//一个MemoryRiver 对应一个文件
+        -:   32:private:
+        -:   33:    /* your code here */
+        -:   34:    fstream file;
+        -:   35:    string file_name;
+        -:   36:    int sizeofT = sizeof(T);
+        -:   37:
+        -:   38:public:
+        -:   39:    MemoryRiver() = default;
+        -:   40:
+        8:   41:    MemoryRiver(const string& file_name) : file_name(file_name) { initialise();}
+------------------
+_ZN11MemoryRiverI10FinanceLogLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI10FinanceLogLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 56%
+        1:   41:    MemoryRiver(const string& file_name) : file_name(file_name) { initialise();}
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   41-block  1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   41-block  2
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:   41-block  3
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   41-block  4
+call   27 never executed
+    $$$$$:   41-block  5
+call   28 never executed
+    $$$$$:   41-block  6
+call   29 never executed
+    $$$$$:   41-block  7
+call   30 never executed
+    $$$$$:   41-block  8
+call   31 never executed
+call   32 never executed
+call   33 never executed
+call   34 never executed
+    $$$$$:   41-block  9
+call   35 never executed
+call   36 never executed
+call   37 never executed
+call   38 never executed
+call   39 never executed
+------------------
+_ZN11MemoryRiverI4BookLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI4BookLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 56%
+        1:   41:    MemoryRiver(const string& file_name) : file_name(file_name) { initialise();}
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   41-block  1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   41-block  2
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:   41-block  3
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   41-block  4
+call   27 never executed
+    $$$$$:   41-block  5
+call   28 never executed
+    $$$$$:   41-block  6
+call   29 never executed
+    $$$$$:   41-block  7
+call   30 never executed
+    $$$$$:   41-block  8
+call   31 never executed
+call   32 never executed
+call   33 never executed
+call   34 never executed
+    $$$$$:   41-block  9
+call   35 never executed
+call   36 never executed
+call   37 never executed
+call   38 never executed
+call   39 never executed
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI12User_AccountLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 56%
+        1:   41:    MemoryRiver(const string& file_name) : file_name(file_name) { initialise();}
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   41-block  1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   41-block  2
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:   41-block  3
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   41-block  4
+call   27 never executed
+    $$$$$:   41-block  5
+call   28 never executed
+    $$$$$:   41-block  6
+call   29 never executed
+    $$$$$:   41-block  7
+call   30 never executed
+    $$$$$:   41-block  8
+call   31 never executed
+call   32 never executed
+call   33 never executed
+call   34 never executed
+    $$$$$:   41-block  9
+call   35 never executed
+call   36 never executed
+call   37 never executed
+call   38 never executed
+call   39 never executed
+------------------
+_ZN11MemoryRiverI5BlockLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI5BlockLi2EEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 56%
+        5:   41:    MemoryRiver(const string& file_name) : file_name(file_name) { initialise();}
+        5:   41-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+call    7 returned 5
+call    8 returned 5
+branch  9 taken 5 (fallthrough)
+branch 10 taken 0 (throw)
+        5:   41-block  1
+call   11 returned 5
+call   12 returned 5
+call   13 returned 5
+call   14 returned 5
+call   15 returned 5
+call   16 returned 5
+call   17 returned 5
+branch 18 taken 5 (fallthrough)
+branch 19 taken 0 (throw)
+        5:   41-block  2
+call   20 returned 5
+branch 21 taken 5 (fallthrough)
+branch 22 taken 0 (throw)
+        5:   41-block  3
+call   23 returned 5
+call   24 returned 5
+call   25 returned 5
+call   26 returned 5
+    $$$$$:   41-block  4
+call   27 never executed
+    $$$$$:   41-block  5
+call   28 never executed
+    $$$$$:   41-block  6
+call   29 never executed
+    $$$$$:   41-block  7
+call   30 never executed
+    $$$$$:   41-block  8
+call   31 never executed
+call   32 never executed
+call   33 never executed
+call   34 never executed
+    $$$$$:   41-block  9
+call   35 never executed
+call   36 never executed
+call   37 never executed
+call   38 never executed
+call   39 never executed
+------------------
+        -:   42:
+        8:   43:    void initialise(string FN = "") {
+       8*:   44:        if (FN != "") file_name = FN;
+        8:   45:        file.open(file_name, std::fstream::in | std::fstream::out);
+        8:   46:        if(!file){//打开不成功说明文件不存在,并且初始化
+        8:   47:            file.open(file_name, std::ofstream::out);
+        8:   48:            int tmp = 0;
+       24:   49:            for (int i = 0; i < info_len; ++i)
+       16:   50:                file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+        -:   51:        }
+        8:   52:        file.close();
+        8:   53:    }
+------------------
+_ZN11MemoryRiverI10FinanceLogLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI10FinanceLogLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 90%
+        1:   43:    void initialise(string FN = "") {
+       1*:   44:        if (FN != "") file_name = FN;
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   44-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        1:   45:        file.open(file_name, std::fstream::in | std::fstream::out);
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+        1:   46:        if(!file){//打开不成功说明文件不存在,并且初始化
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   47:            file.open(file_name, std::ofstream::out);
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   48:            int tmp = 0;
+        1:   48-block  0
+call    0 returned 1
+        3:   49:            for (int i = 0; i < info_len; ++i)
+        3:   49-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   49-block  1
+        2:   50:                file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+        2:   50-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        -:   51:        }
+        1:   52:        file.close();
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+        1:   53:    }
+------------------
+_ZN11MemoryRiverI4BookLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI4BookLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 90%
+        1:   43:    void initialise(string FN = "") {
+       1*:   44:        if (FN != "") file_name = FN;
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   44-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        1:   45:        file.open(file_name, std::fstream::in | std::fstream::out);
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+        1:   46:        if(!file){//打开不成功说明文件不存在,并且初始化
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   47:            file.open(file_name, std::ofstream::out);
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   48:            int tmp = 0;
+        1:   48-block  0
+call    0 returned 1
+        3:   49:            for (int i = 0; i < info_len; ++i)
+        3:   49-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   49-block  1
+        2:   50:                file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+        2:   50-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        -:   51:        }
+        1:   52:        file.close();
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+        1:   53:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI12User_AccountLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 90%
+        1:   43:    void initialise(string FN = "") {
+       1*:   44:        if (FN != "") file_name = FN;
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   44-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        1:   45:        file.open(file_name, std::fstream::in | std::fstream::out);
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+        1:   46:        if(!file){//打开不成功说明文件不存在,并且初始化
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   47:            file.open(file_name, std::ofstream::out);
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   48:            int tmp = 0;
+        1:   48-block  0
+call    0 returned 1
+        3:   49:            for (int i = 0; i < info_len; ++i)
+        3:   49-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   49-block  1
+        2:   50:                file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+        2:   50-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        -:   51:        }
+        1:   52:        file.close();
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+        1:   53:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+function _ZN11MemoryRiverI5BlockLi2EE10initialiseENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 90%
+        5:   43:    void initialise(string FN = "") {
+       5*:   44:        if (FN != "") file_name = FN;
+        5:   44-block  0
+call    0 returned 5
+branch  1 taken 0 (fallthrough)
+branch  2 taken 5
+    %%%%%:   44-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        5:   45:        file.open(file_name, std::fstream::in | std::fstream::out);
+        5:   45-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+call    7 returned 5
+call    8 returned 5
+        5:   46:        if(!file){//打开不成功说明文件不存在,并且初始化
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+call    5 returned 5
+branch  6 taken 5 (fallthrough)
+branch  7 taken 0
+        5:   47:            file.open(file_name, std::ofstream::out);
+        5:   47-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+call    7 returned 5
+branch  8 taken 5 (fallthrough)
+branch  9 taken 0 (throw)
+        5:   48:            int tmp = 0;
+        5:   48-block  0
+call    0 returned 5
+       15:   49:            for (int i = 0; i < info_len; ++i)
+       15:   49-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 5
+       10:   49-block  1
+       10:   50:                file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+       10:   50-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+branch  6 taken 10 (fallthrough)
+branch  7 taken 0 (throw)
+        -:   51:        }
+        5:   52:        file.close();
+        5:   52-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+call    4 returned 5
+        5:   53:    }
+------------------
+        -:   54:
+        -:   55:    /*
+        -:   56:    void initialise(string FN = "") {
+        -:   57:        if (FN != "") file_name = FN;
+        -:   58:        file.open(file_name, std::ios::out);
+        -:   59:        int tmp = 0;
+        -:   60:        for (int i = 0; i < info_len; ++i)
+        -:   61:            file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+        -:   62:        file.close();
+        -:   63:    }
+        -:   64:     */
+        -:   65:
+        -:   66:    //读出第n个int的值赋给tmp，1_base
+      48*:   67:    void get_info(int& tmp, int n) {
+      48*:   68:        if (n > info_len) return;
+      48*:   69:        file.open(file_name);
+      48*:   70:        file.seekg((n - 1) * sizeof(int));
+      48*:   71:        file.read(reinterpret_cast<char*>(&tmp), sizeof(int));
+      48*:   72:        file.close();
+      48*:   73:        return;
+        -:   74:    }
+------------------
+_ZN11MemoryRiverI4BookLi2EE8get_infoERii:
+function _ZN11MemoryRiverI4BookLi2EE8get_infoERii called 0 returned 0% blocks executed 0%
+    #####:   67:    void get_info(int& tmp, int n) {
+    #####:   68:        if (n > info_len) return;
+    %%%%%:   68-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   68-block  1
+    #####:   69:        file.open(file_name);
+    %%%%%:   69-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:   70:        file.seekg((n - 1) * sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   70-block  0
+call    9 never executed
+    $$$$$:   70-block  1
+call   10 never executed
+    #####:   71:        file.read(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   72:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   73:        return;
+        -:   74:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE8get_infoERii:
+function _ZN11MemoryRiverI12User_AccountLi2EE8get_infoERii called 18 returned 100% blocks executed 94%
+       18:   67:    void get_info(int& tmp, int n) {
+      18*:   68:        if (n > info_len) return;
+       18:   68-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 18
+    %%%%%:   68-block  1
+       18:   69:        file.open(file_name);
+       18:   69-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+call    5 returned 18
+call    6 returned 18
+call    7 returned 18
+call    8 returned 18
+       18:   70:        file.seekg((n - 1) * sizeof(int));
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+call    5 returned 18
+call    6 returned 18
+branch  7 taken 18 (fallthrough)
+branch  8 taken 0 (throw)
+       18:   70-block  0
+call    9 returned 18
+    $$$$$:   70-block  1
+call   10 never executed
+       18:   71:        file.read(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+       18:   72:        file.close();
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+       18:   73:        return;
+        -:   74:    }
+------------------
+_ZN11MemoryRiverI10FinanceLogLi2EE8get_infoERii:
+function _ZN11MemoryRiverI10FinanceLogLi2EE8get_infoERii called 0 returned 0% blocks executed 0%
+    #####:   67:    void get_info(int& tmp, int n) {
+    #####:   68:        if (n > info_len) return;
+    %%%%%:   68-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   68-block  1
+    #####:   69:        file.open(file_name);
+    %%%%%:   69-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:   70:        file.seekg((n - 1) * sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   70-block  0
+call    9 never executed
+    $$$$$:   70-block  1
+call   10 never executed
+    #####:   71:        file.read(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   72:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   73:        return;
+        -:   74:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE8get_infoERii:
+function _ZN11MemoryRiverI5BlockLi2EE8get_infoERii called 30 returned 100% blocks executed 94%
+       30:   67:    void get_info(int& tmp, int n) {
+      30*:   68:        if (n > info_len) return;
+       30:   68-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 30
+    %%%%%:   68-block  1
+       30:   69:        file.open(file_name);
+       30:   69-block  0
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+call    3 returned 30
+call    4 returned 30
+call    5 returned 30
+call    6 returned 30
+call    7 returned 30
+call    8 returned 30
+       30:   70:        file.seekg((n - 1) * sizeof(int));
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+call    3 returned 30
+call    4 returned 30
+call    5 returned 30
+call    6 returned 30
+branch  7 taken 30 (fallthrough)
+branch  8 taken 0 (throw)
+       30:   70-block  0
+call    9 returned 30
+    $$$$$:   70-block  1
+call   10 never executed
+       30:   71:        file.read(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+call    3 returned 30
+call    4 returned 30
+       30:   72:        file.close();
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+call    3 returned 30
+call    4 returned 30
+       30:   73:        return;
+        -:   74:    }
+------------------
+        -:   75:
+        -:   76:    //将tmp写入第n个int的位置，1_base
+      20*:   77:    void write_info(int tmp, int n) {
+      20*:   78:        if (n > info_len) return;
+      20*:   79:        file.open(file_name);
+      20*:   80:        file.seekp((n - 1) * sizeof(int));
+      20*:   81:        file.write(reinterpret_cast<char*>(&tmp), sizeof(int));
+      20*:   82:        file.close();
+      20*:   83:        return;
+        -:   84:    }
+------------------
+_ZN11MemoryRiverI10FinanceLogLi2EE10write_infoEii:
+function _ZN11MemoryRiverI10FinanceLogLi2EE10write_infoEii called 0 returned 0% blocks executed 0%
+    #####:   77:    void write_info(int tmp, int n) {
+    #####:   78:        if (n > info_len) return;
+    %%%%%:   78-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   78-block  1
+    #####:   79:        file.open(file_name);
+    %%%%%:   79-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:   80:        file.seekp((n - 1) * sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   80-block  0
+call   10 never executed
+    $$$$$:   80-block  1
+call   11 never executed
+    #####:   81:        file.write(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:   82:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   83:        return;
+        -:   84:    }
+------------------
+_ZN11MemoryRiverI4BookLi2EE10write_infoEii:
+function _ZN11MemoryRiverI4BookLi2EE10write_infoEii called 0 returned 0% blocks executed 0%
+    #####:   77:    void write_info(int tmp, int n) {
+    #####:   78:        if (n > info_len) return;
+    %%%%%:   78-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   78-block  1
+    #####:   79:        file.open(file_name);
+    %%%%%:   79-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:   80:        file.seekp((n - 1) * sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   80-block  0
+call   10 never executed
+    $$$$$:   80-block  1
+call   11 never executed
+    #####:   81:        file.write(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:   82:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   83:        return;
+        -:   84:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE10write_infoEii:
+function _ZN11MemoryRiverI12User_AccountLi2EE10write_infoEii called 18 returned 100% blocks executed 94%
+       18:   77:    void write_info(int tmp, int n) {
+      18*:   78:        if (n > info_len) return;
+       18:   78-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 18
+    %%%%%:   78-block  1
+       18:   79:        file.open(file_name);
+       18:   79-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+call    5 returned 18
+call    6 returned 18
+call    7 returned 18
+call    8 returned 18
+       18:   80:        file.seekp((n - 1) * sizeof(int));
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+call    5 returned 18
+call    6 returned 18
+call    7 returned 18
+branch  8 taken 18 (fallthrough)
+branch  9 taken 0 (throw)
+       18:   80-block  0
+call   10 returned 18
+    $$$$$:   80-block  1
+call   11 never executed
+       18:   81:        file.write(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+call    5 returned 18
+       18:   82:        file.close();
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+call    4 returned 18
+       18:   83:        return;
+        -:   84:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE10write_infoEii:
+function _ZN11MemoryRiverI5BlockLi2EE10write_infoEii called 2 returned 100% blocks executed 94%
+        2:   77:    void write_info(int tmp, int n) {
+       2*:   78:        if (n > info_len) return;
+        2:   78-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    %%%%%:   78-block  1
+        2:   79:        file.open(file_name);
+        2:   79-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+        2:   80:        file.seekp((n - 1) * sizeof(int));
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   80-block  0
+call   10 returned 2
+    $$$$$:   80-block  1
+call   11 never executed
+        2:   81:        file.write(reinterpret_cast<char*>(&tmp), sizeof(int));
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+        2:   82:        file.close();
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+        2:   83:        return;
+        -:   84:    }
+------------------
+        -:   85:
+        -:   86:    //在文件合适位置写入类对象t，并返回写入的位置索引index
+        -:   87:    //位置索引意味着当输入正确的位置索引index，在以下三个函数中都能顺利的找到目标对象进行操作
+        -:   88:    //位置索引index可以取为对象写入的起始位置
+      10*:   89:    int write(T &t) {
+        -:   90:        /* your code here */
+        -:   91:        int index;
+      10*:   92:        int num_T, del_head;
+      10*:   93:        get_info(num_T, 1);
+      10*:   94:        get_info(del_head, 2);
+      10*:   95:        if(!del_head)//在文件尾部加
+      10*:   96:            index = info_len * sizeof(int) + num_T * sizeofT;
+        -:   97:        else {//在释放掉的空间加
+    #####:   98:            index = del_head;
+    #####:   99:            file.open(file_name);
+    #####:  100:            file.seekg(del_head);
+    #####:  101:            file.read(reinterpret_cast<char*>(&del_head), sizeof(int));
+    #####:  102:            file.close();
+        -:  103:        }
+      10*:  104:        file.open(file_name);
+      10*:  105:        file.seekp(index);
+      10*:  106:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+      10*:  107:        file.close();
+      10*:  108:        write_info(++num_T, 1);
+      10*:  109:        write_info(del_head, 2);//更新 del_head 的值
+      20*:  110:        return index;
+        -:  111:    }
+------------------
+_ZN11MemoryRiverI10FinanceLogLi2EE5writeERS0_:
+function _ZN11MemoryRiverI10FinanceLogLi2EE5writeERS0_ called 0 returned 0% blocks executed 0%
+    #####:   89:    int write(T &t) {
+        -:   90:        /* your code here */
+        -:   91:        int index;
+    #####:   92:        int num_T, del_head;
+    %%%%%:   92-block  0
+call    0 never executed
+call    1 never executed
+    #####:   93:        get_info(num_T, 1);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   94:        get_info(del_head, 2);
+    %%%%%:   94-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   95:        if(!del_head)//在文件尾部加
+    %%%%%:   95-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   96:            index = info_len * sizeof(int) + num_T * sizeofT;
+    %%%%%:   96-block  0
+call    0 never executed
+call    1 never executed
+        -:   97:        else {//在释放掉的空间加
+    #####:   98:            index = del_head;
+    #####:   99:            file.open(file_name);
+    %%%%%:   99-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  100:            file.seekg(del_head);
+    %%%%%:  100-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  100-block  1
+call    9 never executed
+    $$$$$:  100-block  2
+call   10 never executed
+    #####:  101:            file.read(reinterpret_cast<char*>(&del_head), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  102:            file.close();
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        -:  103:        }
+    #####:  104:        file.open(file_name);
+    %%%%%:  104-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  105:        file.seekp(index);
+    %%%%%:  105-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  105-block  1
+call   10 never executed
+    $$$$$:  105-block  2
+call   11 never executed
+    #####:  106:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  107:        file.close();
+    %%%%%:  107-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  108:        write_info(++num_T, 1);
+    %%%%%:  108-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  109:        write_info(del_head, 2);//更新 del_head 的值
+    %%%%%:  109-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  110:        return index;
+    %%%%%:  110-block  0
+call    0 never executed
+        -:  111:    }
+------------------
+_ZN11MemoryRiverI4BookLi2EE5writeERS0_:
+function _ZN11MemoryRiverI4BookLi2EE5writeERS0_ called 0 returned 0% blocks executed 0%
+    #####:   89:    int write(T &t) {
+        -:   90:        /* your code here */
+        -:   91:        int index;
+    #####:   92:        int num_T, del_head;
+    %%%%%:   92-block  0
+call    0 never executed
+call    1 never executed
+    #####:   93:        get_info(num_T, 1);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   94:        get_info(del_head, 2);
+    %%%%%:   94-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   95:        if(!del_head)//在文件尾部加
+    %%%%%:   95-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   96:            index = info_len * sizeof(int) + num_T * sizeofT;
+    %%%%%:   96-block  0
+call    0 never executed
+call    1 never executed
+        -:   97:        else {//在释放掉的空间加
+    #####:   98:            index = del_head;
+    #####:   99:            file.open(file_name);
+    %%%%%:   99-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  100:            file.seekg(del_head);
+    %%%%%:  100-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  100-block  1
+call    9 never executed
+    $$$$$:  100-block  2
+call   10 never executed
+    #####:  101:            file.read(reinterpret_cast<char*>(&del_head), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  102:            file.close();
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        -:  103:        }
+    #####:  104:        file.open(file_name);
+    %%%%%:  104-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  105:        file.seekp(index);
+    %%%%%:  105-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  105-block  1
+call   10 never executed
+    $$$$$:  105-block  2
+call   11 never executed
+    #####:  106:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  107:        file.close();
+    %%%%%:  107-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  108:        write_info(++num_T, 1);
+    %%%%%:  108-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  109:        write_info(del_head, 2);//更新 del_head 的值
+    %%%%%:  109-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  110:        return index;
+    %%%%%:  110-block  0
+call    0 never executed
+        -:  111:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE5writeERS0_:
+function _ZN11MemoryRiverI12User_AccountLi2EE5writeERS0_ called 9 returned 100% blocks executed 60%
+        9:   89:    int write(T &t) {
+        -:   90:        /* your code here */
+        -:   91:        int index;
+        9:   92:        int num_T, del_head;
+        9:   92-block  0
+call    0 returned 9
+call    1 returned 9
+        9:   93:        get_info(num_T, 1);
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:   94:        get_info(del_head, 2);
+        9:   94-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:   95:        if(!del_head)//在文件尾部加
+        9:   95-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:   96:            index = info_len * sizeof(int) + num_T * sizeofT;
+        9:   96-block  0
+call    0 returned 9
+call    1 returned 9
+        -:   97:        else {//在释放掉的空间加
+    #####:   98:            index = del_head;
+    #####:   99:            file.open(file_name);
+    %%%%%:   99-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  100:            file.seekg(del_head);
+    %%%%%:  100-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  100-block  1
+call    9 never executed
+    $$$$$:  100-block  2
+call   10 never executed
+    #####:  101:            file.read(reinterpret_cast<char*>(&del_head), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  102:            file.close();
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        -:  103:        }
+        9:  104:        file.open(file_name);
+        9:  104-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+call    8 returned 9
+branch  9 taken 9 (fallthrough)
+branch 10 taken 0 (throw)
+        9:  105:        file.seekp(index);
+        9:  105-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+branch  8 taken 9 (fallthrough)
+branch  9 taken 0 (throw)
+        9:  105-block  1
+call   10 returned 9
+    $$$$$:  105-block  2
+call   11 never executed
+        9:  106:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+branch  8 taken 9 (fallthrough)
+branch  9 taken 0 (throw)
+        9:  107:        file.close();
+        9:  107-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+branch  5 taken 9 (fallthrough)
+branch  6 taken 0 (throw)
+        9:  108:        write_info(++num_T, 1);
+        9:  108-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:  109:        write_info(del_head, 2);//更新 del_head 的值
+        9:  109-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+       18:  110:        return index;
+        9:  110-block  0
+call    0 returned 9
+        -:  111:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE5writeERS0_:
+function _ZN11MemoryRiverI5BlockLi2EE5writeERS0_ called 1 returned 100% blocks executed 60%
+        1:   89:    int write(T &t) {
+        -:   90:        /* your code here */
+        -:   91:        int index;
+        1:   92:        int num_T, del_head;
+        1:   92-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   93:        get_info(num_T, 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   94:        get_info(del_head, 2);
+        1:   94-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   95:        if(!del_head)//在文件尾部加
+        1:   95-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   96:            index = info_len * sizeof(int) + num_T * sizeofT;
+        1:   96-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   97:        else {//在释放掉的空间加
+    #####:   98:            index = del_head;
+    #####:   99:            file.open(file_name);
+    %%%%%:   99-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  100:            file.seekg(del_head);
+    %%%%%:  100-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  100-block  1
+call    9 never executed
+    $$$$$:  100-block  2
+call   10 never executed
+    #####:  101:            file.read(reinterpret_cast<char*>(&del_head), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  102:            file.close();
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        -:  103:        }
+        1:  104:        file.open(file_name);
+        1:  104-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  105:        file.seekp(index);
+        1:  105-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  105-block  1
+call   10 returned 1
+    $$$$$:  105-block  2
+call   11 never executed
+        1:  106:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  107:        file.close();
+        1:  107-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  108:        write_info(++num_T, 1);
+        1:  108-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  109:        write_info(del_head, 2);//更新 del_head 的值
+        1:  109-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        2:  110:        return index;
+        1:  110-block  0
+call    0 returned 1
+        -:  111:    }
+------------------
+        -:  112:
+        -:  113:    //用t的值更新位置索引index对应的对象，保证调用的index都是由write函数产生
+       9*:  114:    void update(T &t, const int index) {
+        -:  115:        /* your code here */
+       9*:  116:        file.open(file_name);
+       9*:  117:        file.seekp(index);
+       9*:  118:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+       9*:  119:        file.close();
+       9*:  120:    }
+------------------
+_ZN11MemoryRiverI4BookLi2EE6updateERS0_i:
+function _ZN11MemoryRiverI4BookLi2EE6updateERS0_i called 0 returned 0% blocks executed 0%
+    #####:  114:    void update(T &t, const int index) {
+        -:  115:        /* your code here */
+    #####:  116:        file.open(file_name);
+    %%%%%:  116-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:  117:        file.seekp(index);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  117-block  0
+call   10 never executed
+    $$$$$:  117-block  1
+call   11 never executed
+    #####:  118:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+    #####:  119:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  120:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE6updateERS0_i:
+function _ZN11MemoryRiverI12User_AccountLi2EE6updateERS0_i called 0 returned 0% blocks executed 0%
+    #####:  114:    void update(T &t, const int index) {
+        -:  115:        /* your code here */
+    #####:  116:        file.open(file_name);
+    %%%%%:  116-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:  117:        file.seekp(index);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  117-block  0
+call   10 never executed
+    $$$$$:  117-block  1
+call   11 never executed
+    #####:  118:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+    #####:  119:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  120:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE6updateERS0_i:
+function _ZN11MemoryRiverI5BlockLi2EE6updateERS0_i called 9 returned 100% blocks executed 97%
+        9:  114:    void update(T &t, const int index) {
+        -:  115:        /* your code here */
+        9:  116:        file.open(file_name);
+        9:  116-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+call    8 returned 9
+        9:  117:        file.seekp(index);
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+branch  8 taken 9 (fallthrough)
+branch  9 taken 0 (throw)
+        9:  117-block  0
+call   10 returned 9
+    $$$$$:  117-block  1
+call   11 never executed
+        9:  118:        file.write(reinterpret_cast<char*>(&t), sizeofT);
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+call    5 returned 9
+call    6 returned 9
+call    7 returned 9
+        9:  119:        file.close();
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+call    4 returned 9
+        9:  120:    }
+------------------
+        -:  121:
+        -:  122:    //读出位置索引index对应的T对象的值并赋值给t，保证调用的index都是由write函数产生
+      37*:  123:    void read(T &t, const int index) {
+        -:  124:        /* your code here */
+      37*:  125:        file.open(file_name);
+      37*:  126:        file.seekg(index);
+      37*:  127:        file.read(reinterpret_cast<char*>(&t), sizeofT);
+      37*:  128:        file.close();
+      37*:  129:    }
+------------------
+_ZN11MemoryRiverI10FinanceLogLi2EE4readERS0_i:
+function _ZN11MemoryRiverI10FinanceLogLi2EE4readERS0_i called 0 returned 0% blocks executed 0%
+    #####:  123:    void read(T &t, const int index) {
+        -:  124:        /* your code here */
+    #####:  125:        file.open(file_name);
+    %%%%%:  125-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:  126:        file.seekg(index);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  126-block  0
+call    9 never executed
+    $$$$$:  126-block  1
+call   10 never executed
+    #####:  127:        file.read(reinterpret_cast<char*>(&t), sizeofT);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    #####:  128:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  129:    }
+------------------
+_ZN11MemoryRiverI4BookLi2EE4readERS0_i:
+function _ZN11MemoryRiverI4BookLi2EE4readERS0_i called 0 returned 0% blocks executed 0%
+    #####:  123:    void read(T &t, const int index) {
+        -:  124:        /* your code here */
+    #####:  125:        file.open(file_name);
+    %%%%%:  125-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:  126:        file.seekg(index);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  126-block  0
+call    9 never executed
+    $$$$$:  126-block  1
+call   10 never executed
+    #####:  127:        file.read(reinterpret_cast<char*>(&t), sizeofT);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    #####:  128:        file.close();
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  129:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE4readERS0_i:
+function _ZN11MemoryRiverI12User_AccountLi2EE4readERS0_i called 10 returned 100% blocks executed 97%
+       10:  123:    void read(T &t, const int index) {
+        -:  124:        /* your code here */
+       10:  125:        file.open(file_name);
+       10:  125-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+call    6 returned 10
+call    7 returned 10
+call    8 returned 10
+       10:  126:        file.seekg(index);
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+call    6 returned 10
+branch  7 taken 10 (fallthrough)
+branch  8 taken 0 (throw)
+       10:  126-block  0
+call    9 returned 10
+    $$$$$:  126-block  1
+call   10 never executed
+       10:  127:        file.read(reinterpret_cast<char*>(&t), sizeofT);
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+call    6 returned 10
+       10:  128:        file.close();
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+       10:  129:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE4readERS0_i:
+function _ZN11MemoryRiverI5BlockLi2EE4readERS0_i called 27 returned 100% blocks executed 97%
+       27:  123:    void read(T &t, const int index) {
+        -:  124:        /* your code here */
+       27:  125:        file.open(file_name);
+       27:  125-block  0
+call    0 returned 27
+call    1 returned 27
+call    2 returned 27
+call    3 returned 27
+call    4 returned 27
+call    5 returned 27
+call    6 returned 27
+call    7 returned 27
+call    8 returned 27
+       27:  126:        file.seekg(index);
+call    0 returned 27
+call    1 returned 27
+call    2 returned 27
+call    3 returned 27
+call    4 returned 27
+call    5 returned 27
+call    6 returned 27
+branch  7 taken 27 (fallthrough)
+branch  8 taken 0 (throw)
+       27:  126-block  0
+call    9 returned 27
+    $$$$$:  126-block  1
+call   10 never executed
+       27:  127:        file.read(reinterpret_cast<char*>(&t), sizeofT);
+call    0 returned 27
+call    1 returned 27
+call    2 returned 27
+call    3 returned 27
+call    4 returned 27
+call    5 returned 27
+call    6 returned 27
+       27:  128:        file.close();
+call    0 returned 27
+call    1 returned 27
+call    2 returned 27
+call    3 returned 27
+call    4 returned 27
+       27:  129:    }
+------------------
+        -:  130:
+        -:  131:    //删除位置索引index对应的对象(不涉及空间回收时，可忽略此函数)，保证调用的index都是由write函数产生
+        -:  132:
+    #####:  133:    void Delete(int index) {//放入vector中
+    #####:  134:        int del_head;
+    #####:  135:        get_info(del_head, 2);
+    #####:  136:        file.open(file_name);
+    #####:  137:        file.seekp(index);
+    #####:  138:        file.write(reinterpret_cast<char*>(&del_head), sizeof(int));
+    #####:  139:        del_head = index;
+    #####:  140:        file.close();
+    #####:  141:        write_info(del_head, 2);
+    #####:  142:    }
+------------------
+_ZN11MemoryRiverI12User_AccountLi2EE6DeleteEi:
+function _ZN11MemoryRiverI12User_AccountLi2EE6DeleteEi called 0 returned 0% blocks executed 0%
+    #####:  133:    void Delete(int index) {//放入vector中
+    #####:  134:        int del_head;
+    %%%%%:  134-block  0
+call    0 never executed
+    #####:  135:        get_info(del_head, 2);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  136:        file.open(file_name);
+    %%%%%:  136-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  137:        file.seekp(index);
+    %%%%%:  137-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  137-block  1
+call   10 never executed
+    $$$$$:  137-block  2
+call   11 never executed
+    #####:  138:        file.write(reinterpret_cast<char*>(&del_head), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  139:        del_head = index;
+    #####:  140:        file.close();
+    %%%%%:  140-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  141:        write_info(del_head, 2);
+    %%%%%:  141-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  142:    }
+------------------
+_ZN11MemoryRiverI5BlockLi2EE6DeleteEi:
+function _ZN11MemoryRiverI5BlockLi2EE6DeleteEi called 0 returned 0% blocks executed 0%
+    #####:  133:    void Delete(int index) {//放入vector中
+    #####:  134:        int del_head;
+    %%%%%:  134-block  0
+call    0 never executed
+    #####:  135:        get_info(del_head, 2);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  136:        file.open(file_name);
+    %%%%%:  136-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:  137:        file.seekp(index);
+    %%%%%:  137-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  137-block  1
+call   10 never executed
+    $$$$$:  137-block  2
+call   11 never executed
+    #####:  138:        file.write(reinterpret_cast<char*>(&del_head), sizeof(int));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  139:        del_head = index;
+    #####:  140:        file.close();
+    %%%%%:  140-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  141:        write_info(del_head, 2);
+    %%%%%:  141-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  142:    }
+------------------
+        -:  143:};
+        -:  144:
+        -:  145:class Node{//存储一个键值对
+        -:  146:private:
+        -:  147:    int value;
+        -:  148:    char key[MaxLen];
+        -:  149:public:
+        -:  150:    friend class Block;
+        -:  151:    friend class BlockList;
+function _ZN4NodeC2Ev called 56140 returned 100% blocks executed 100%
+    56140:  152:    Node() : key(""){}
+    56140:  152-block  0
+call    0 returned 56140
+call    1 returned 56140
+call    2 returned 56140
+function _ZN4NodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKi called 9 returned 100% blocks executed 83%
+        9:  153:    Node(const string& str, const int& val){
+        9:  153-block  0
+call    0 returned 9
+       9*:  154:        strcpy(key, str.c_str());
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+branch  4 taken 0 (fallthrough)
+branch  5 taken 9
+    %%%%%:  154-block  0
+        9:  154-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 9
+    %%%%%:  154-block  2
+        9:  155:        value = val;
+        9:  155-block  0
+call    0 returned 9
+call    1 returned 9
+        9:  156:    }
+function _ZNK4NodeeqERKS_ called 0 returned 0% blocks executed 0%
+    #####:  157:    bool operator == (const Node& tmp) const {
+    #####:  158:        return value == tmp.value && !strcmp(key, tmp.key);
+    %%%%%:  158-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  158-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  158-block  2
+    %%%%%:  158-block  3
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  158-block  4
+    %%%%%:  158-block  5
+branch 12 never executed
+branch 13 never executed
+    %%%%%:  158-block  6
+    %%%%%:  158-block  7
+    %%%%%:  158-block  8
+        -:  159:    }
+function _ZNK4NodeneERKS_ called 0 returned 0% blocks executed 0%
+    #####:  160:    bool operator != (const Node& tmp) const {
+    #####:  161:        return !(*this == tmp);
+    %%%%%:  161-block  0
+call    0 never executed
+call    1 never executed
+        -:  162:    }
+function _ZNK4NodeltERKS_ called 19 returned 100% blocks executed 68%
+       19:  163:    bool operator < (const Node& tmp) const {
+      19*:  164:        if(!strcmp(key, tmp.key)) return value < tmp.value;
+       19:  164-block  0
+call    0 returned 19
+call    1 returned 19
+call    2 returned 19
+call    3 returned 19
+branch  4 taken 0 (fallthrough)
+branch  5 taken 19
+    %%%%%:  164-block  1
+       19:  164-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 19
+    %%%%%:  164-block  3
+       19:  164-block  4
+branch  8 taken 0 (fallthrough)
+branch  9 taken 19
+    %%%%%:  164-block  5
+call   10 never executed
+call   11 never executed
+      19*:  165:        return strcmp(key, tmp.key) < 0 ? true : false;
+       19:  165-block  0
+call    0 returned 19
+call    1 returned 19
+call    2 returned 19
+call    3 returned 19
+branch  4 taken 0 (fallthrough)
+branch  5 taken 19
+    %%%%%:  165-block  1
+       19:  165-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 19
+    %%%%%:  165-block  3
+       19:  165-block  4
+        -:  166:    }
+function _ZNK4NodegtERKS_ called 0 returned 0% blocks executed 0%
+    #####:  167:    bool operator > (const Node& tmp) const {
+    #####:  168:        return !(*this < tmp) && *this != tmp;
+    %%%%%:  168-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  168-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  168-block  2
+    %%%%%:  168-block  3
+    %%%%%:  168-block  4
+        -:  169:    }
+        -:  170:    bool operator <= (const Node& tmp) const {
+        -:  171:        return *this < tmp || *this == tmp;
+        -:  172:    }
+        -:  173:    bool operator >= (const Node& tmp) const {
+        -:  174:        return *this > tmp || *this == tmp;
+        -:  175:    }
+        -:  176:};
+        -:  177:
+        -:  178:class Block{//一个块 头部:重要信息 尾部:Node 数组
+        -:  179:private:
+        -:  180:    //存储该块的前驱,后继,该块中数据的数量, 该块的起始位置
+        -:  181:    int pre_index, nxt_index, size, pos;
+        -:  182:    //存储该块中最大和最小的pair
+        -:  183:    Node array[(MaxBlockLen << 1) + 5];
+        -:  184:public:
+        -:  185:    friend class BlockList;
+function _ZN5BlockC2Ev called 28 returned 100% blocks executed 100%
+    56168:  186:    Block() : pre_index(0), nxt_index(0), size(0), pos(-1){}
+       28:  186-block  0
+call    0 returned 28
+call    1 returned 28
+call    2 returned 28
+call    3 returned 28
+call    4 returned 28
+call    5 returned 28
+call    6 returned 28
+call    7 returned 28
+call    8 returned 28
+call    9 returned 28
+    56168:  186-block  1
+branch 10 taken 56140 (fallthrough)
+branch 11 taken 28
+    56140:  186-block  2
+call   12 returned 56140
+call   13 returned 56140
+call   14 returned 56140
+        -:  187:    Block(const Block& tmp){
+        -:  188:        *this = tmp;
+        -:  189:    }
+        -:  190:    Block &operator = (const Block& tmp){
+        -:  191:        pre_index = tmp.pre_index;
+        -:  192:        nxt_index = tmp.nxt_index;
+        -:  193:        size = tmp.size;
+        -:  194:        pos = tmp.pos;
+        -:  195:        memcpy(array, tmp.array, size + 1);
+        -:  196:        return *this;
+        -:  197:    }
+        -:  198:};
+        -:  199:
+        -:  200:class BlockList{
+        -:  201:private:
+        -:  202:    //将一个块状链表与一个 MemoryRiver 类关联
+        -:  203:    MemoryRiver<Block> Blocks;
+        -:  204:public:
+        -:  205:    BlockList() = default;
+function _ZN9BlockListC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 100%
+        5:  206:    BlockList(const string& name):Blocks(name){}
+        5:  206-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+function _ZN9BlockList6InsertERK4Node called 9 returned 100% blocks executed 55%
+        9:  207:    void Insert(const Node& tmp){
+        9:  208:        int num, fpos;
+        9:  208-block  0
+call    0 returned 9
+        9:  209:        Blocks.get_info(num, 1);//获取块数;
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+branch  3 taken 9 (fallthrough)
+branch  4 taken 0 (throw)
+        9:  210:        fpos = 8;
+        9:  211:        if(!num){//第一个插入的元素,没有可以被读取的块,于是创建一个新的块
+        9:  211-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 8
+        1:  212:            Block new_block;
+        1:  212-block  0
+call    0 returned 1
+call    1 returned 1
+        1:  213:            new_block.size = 1;
+        1:  214:            new_block.array[0] = tmp;
+call    0 returned 1
+        1:  215:            new_block.pos = Blocks.write(new_block);//将该块写入文件
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  216:            Blocks.update(new_block, new_block.pos);
+        1:  216-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        -:  217:        }
+        -:  218:        else{//读取所在的块,注意边界情况的处理,比如说:最小的pair, 与最大的pair
+        8:  219:            Block tmp_block;
+        8:  219-block  0
+call    0 returned 8
+call    1 returned 8
+        8:  220:            int cnt = 0;
+       8*:  221:            for(int i = fpos; i; i = tmp_block.nxt_index){
+        8:  221-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+    %%%%%:  221-block  1
+        8:  222:                cnt++;
+        8:  223:                Blocks.read(tmp_block, i);
+        8:  223-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+        8:  224:                if(!tmp_block.size){//对于空块特判即可
+        8:  224-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 8
+    #####:  225:                    if(cnt == num){//最后一块的情况
+    %%%%%:  225-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  226:                        tmp_block.array[0] = tmp;
+    %%%%%:  226-block  0
+call    0 never executed
+    #####:  227:                        tmp_block.size++;
+    #####:  228:                        Blocks.update(tmp_block, i);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  229:                        return;
+    %%%%%:  229-block  0
+        -:  230:                    }
+        -:  231:                    else{
+    #####:  232:                        int nxt_pos = tmp_block.nxt_index;
+    #####:  233:                        Block nxt_block;
+    %%%%%:  233-block  0
+call    0 never executed
+call    1 never executed
+    #####:  234:                        Blocks.read(nxt_block, nxt_pos);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  235:                        if(nxt_block.size && tmp < nxt_block.array[0]){
+    %%%%%:  235-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  235-block  1
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  235-block  2
+    %%%%%:  235-block  3
+    %%%%%:  235-block  4
+branch  6 never executed
+branch  7 never executed
+    #####:  236:                            tmp_block.array[0] = tmp;
+    %%%%%:  236-block  0
+call    0 never executed
+    #####:  237:                            tmp_block.size++;
+    #####:  238:                            Blocks.update(tmp_block, i);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  239:                            return;
+    %%%%%:  239-block  0
+        -:  240:                        }
+    #####:  241:                        continue;
+    %%%%%:  241-block  0
+        -:  242:                    }
+        -:  243:                }
+       8*:  244:                if( cnt == num || tmp < tmp_block.array[tmp_block.size - 1]){//读到这个Block里面
+        8:  244-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 8
+    %%%%%:  244-block  1
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        8:  244-block  2
+    %%%%%:  244-block  3
+        8:  244-block  4
+branch  8 taken 8 (fallthrough)
+branch  9 taken 0
+        8:  245:                    int it = std::lower_bound(tmp_block.array, tmp_block.array + tmp_block.size, tmp) - tmp_block.array;
+        8:  245-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+       18:  246:                    for(int j = tmp_block.size; j > it; --j){
+        8:  246-block  0
+       18:  246-block  1
+branch  0 taken 10 (fallthrough)
+branch  1 taken 8
+       10:  247:                        tmp_block.array[j] = tmp_block.array[j - 1];
+       10:  247-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+        -:  248:                    }
+        8:  249:                    tmp_block.array[it] = tmp;
+        8:  249-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+call    3 returned 8
+        8:  250:                    tmp_block.size++;
+        8:  251:                    Blocks.update(tmp_block, i);
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+        8:  252:                    break;
+        8:  252-block  0
+        -:  253:                }
+        -:  254:            }
+        8:  255:            if(tmp_block.size >= ApartLen){//触发分裂
+        8:  255-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 8
+    #####:  256:                Split(tmp_block.pos);
+    %%%%%:  256-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  257:            }
+        -:  258:        }
+        -:  259:    }
+function _ZN9BlockList7FindAllERSt6vectorIiSaIiEE called 0 returned 0% blocks executed 0%
+    #####:  260:    void FindAll(vector<int>& ans){
+    #####:  261:        int num, fpos = 8;
+    %%%%%:  261-block  0
+call    0 never executed
+    #####:  262:        Blocks.get_info(num, 1);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  263:        Block tmp_block;
+    %%%%%:  263-block  0
+call    0 never executed
+call    1 never executed
+    #####:  264:        for(int i = fpos; i; i = tmp_block.nxt_index){
+    %%%%%:  264-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  264-block  1
+    #####:  265:            Blocks.read(tmp_block, i);
+    %%%%%:  265-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  266:            for(int j = 0; j < tmp_block.size; ++j){
+    %%%%%:  266-block  0
+    %%%%%:  266-block  1
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  266-block  2
+    #####:  267:                ans.push_back(tmp_block.array[j].value);
+    %%%%%:  267-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  268:            }
+        -:  269:        }
+    #####:  270:    }
+function _ZN9BlockList4FindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorIiSaIiEE called 19 returned 100% blocks executed 94%
+       19:  271:    void Find(const string& TmpK, vector<int>& ans){
+       19:  272:        int num, fpos = 8;
+       19:  272-block  0
+call    0 returned 19
+       19:  273:        Blocks.get_info(num, 1);
+call    0 returned 19
+call    1 returned 19
+call    2 returned 19
+branch  3 taken 19 (fallthrough)
+branch  4 taken 0 (throw)
+       19:  274:        Block tmp_block;
+       19:  274-block  0
+call    0 returned 19
+call    1 returned 19
+       38:  275:        for(int i = fpos; i;){
+       38:  275-block  0
+branch  0 taken 19 (fallthrough)
+branch  1 taken 19
+       19:  275-block  1
+       19:  276:            Blocks.read(tmp_block, i);
+       19:  276-block  0
+call    0 returned 19
+call    1 returned 19
+call    2 returned 19
+branch  3 taken 19 (fallthrough)
+branch  4 taken 0 (throw)
+       19:  277:            if(!tmp_block.size){
+       19:  277-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 18
+        1:  278:                i = tmp_block.nxt_index;
+        1:  279:                continue;
+        1:  279-block  0
+        -:  280:            }
+      18*:  281:            if(TmpK < tmp_block.array[0].key) break;//太大,则break;
+       18:  281-block  0
+call    0 returned 18
+call    1 returned 18
+branch  2 taken 0 (fallthrough)
+branch  3 taken 18
+    %%%%%:  281-block  1
+        -:  282://            cout << "Hello : in Blocks.h 258 " << tmp_block.size << endl;
+       18:  283:            if(TmpK > tmp_block.array[tmp_block.size - 1].key){//太小,则continue;
+       18:  283-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+call    3 returned 18
+branch  4 taken 2 (fallthrough)
+branch  5 taken 16
+        2:  284:                i = tmp_block.nxt_index;
+        2:  285:                continue;
+        2:  285-block  0
+        -:  286:            }
+       75:  287:            for(int j = 0; j < tmp_block.size; ++j){
+       16:  287-block  0
+       75:  287-block  1
+branch  0 taken 72 (fallthrough)
+branch  1 taken 3
+       59:  287-block  2
+       72:  288:                if(TmpK == tmp_block.array[j].key){
+       72:  288-block  0
+call    0 returned 72
+call    1 returned 72
+call    2 returned 72
+call    3 returned 72
+branch  4 taken 10 (fallthrough)
+branch  5 taken 62
+       10:  289:                    ans.push_back(tmp_block.array[j].value);
+       10:  289-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:  290:                    continue;
+       10:  290-block  0
+        -:  291:                }
+       62:  292:                if(TmpK < tmp_block.array[j].key) break;
+       62:  292-block  0
+call    0 returned 62
+call    1 returned 62
+call    2 returned 62
+call    3 returned 62
+branch  4 taken 13 (fallthrough)
+branch  5 taken 49
+       13:  292-block  1
+        -:  293:            }
+       16:  294:            i = tmp_block.nxt_index;
+       16:  294-block  0
+        -:  295:        }
+       19:  296:    }
+function _ZN9BlockList6DeleteERK4Node called 0 returned 0% blocks executed 0%
+    #####:  297:    void Delete(const Node& tmp){//先找到该条目,找不到就返回
+    #####:  298:        int num, fpos = 8;
+    %%%%%:  298-block  0
+call    0 never executed
+    #####:  299:        Blocks.get_info(num, 1);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  300:        Block tmp_block;
+    %%%%%:  300-block  0
+call    0 never executed
+call    1 never executed
+    #####:  301:        for(int i = fpos; i; i = tmp_block.nxt_index){
+    %%%%%:  301-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  301-block  1
+    #####:  302:            Blocks.read(tmp_block, i);
+    %%%%%:  302-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  303:            if(!tmp_block.size){
+    %%%%%:  303-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  304:                continue;
+    %%%%%:  304-block  0
+        -:  305:            }
+    #####:  306:            if(tmp < tmp_block.array[0] || tmp > tmp_block.array[tmp_block.size - 1]){//不在该块中
+    %%%%%:  306-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  306-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  306-block  2
+    %%%%%:  306-block  3
+    %%%%%:  306-block  4
+branch 10 never executed
+branch 11 never executed
+    #####:  307:                continue;
+    %%%%%:  307-block  0
+        -:  308:            }
+        -:  309:            else{//可能在该块中
+    #####:  310:                for(int j = 0; j < tmp_block.size; ++j){
+    %%%%%:  310-block  0
+    %%%%%:  310-block  1
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  310-block  2
+    #####:  311:                    if(tmp_block.array[j] == tmp){
+    %%%%%:  311-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  312:                        tmp_block.size--;
+    #####:  313:                        for(int k = j; k < tmp_block.size; ++k)//依次修改数组元素
+    %%%%%:  313-block  0
+    %%%%%:  313-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  314:                            tmp_block.array[k] = tmp_block.array[k + 1];
+    %%%%%:  314-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:  315:                        Blocks.update(tmp_block, i);
+    %%%%%:  315-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  316:                        if(tmp_block.size <= MergeLen) Merge(tmp_block.pos);
+    %%%%%:  316-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  316-block  1
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  317:                        break;
+    %%%%%:  317-block  0
+        -:  318:                    }
+    #####:  319:                    else if(tmp_block.array[j] > tmp) break;
+    %%%%%:  319-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  319-block  1
+        -:  320:                }
+    #####:  321:                continue;
+    %%%%%:  321-block  0
+        -:  322:            }
+        -:  323:        }
+    #####:  324:    }
+function _ZN9BlockList5SplitERKi called 0 returned 0% blocks executed 0%
+    #####:  325:    void Split(const int& pos){//位于pos处的块分裂(向后分裂,即分裂出的块是被分裂的后继)
+    #####:  326:        Block tmp_block, new_block;
+    %%%%%:  326-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:  327:        int org_size, num;
+call    0 never executed
+    #####:  328:        Blocks.get_info(num, 1);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  329:        Blocks.read(tmp_block, pos);
+    %%%%%:  329-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  330:        org_size = tmp_block.size;
+    #####:  331:        tmp_block.size /= 2;
+    %%%%%:  331-block  0
+    #####:  332:        new_block.size = org_size - tmp_block.size;
+    #####:  333:        new_block.pre_index = tmp_block.pos;
+    #####:  334:        new_block.nxt_index = tmp_block.nxt_index;
+    #####:  335:        for(int i = 0; i < new_block.size; ++i)
+    %%%%%:  335-block  0
+    %%%%%:  335-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  336:            new_block.array[i] = tmp_block.array[i + tmp_block.size];
+    %%%%%:  336-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:  337:        new_block.pos = Blocks.write(new_block);
+    %%%%%:  337-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  338:        tmp_block.nxt_index = new_block.pos;
+    #####:  339:        Blocks.update(tmp_block, tmp_block.pos);
+    %%%%%:  339-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  340:        Blocks.update(new_block, new_block.pos);
+    %%%%%:  340-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  341:    }
+function _ZN9BlockList5MergeERKi called 0 returned 0% blocks executed 0%
+    #####:  342:    void Merge(const int& pos){//将位于pos处的块与其pre合并(向前合并,即与其前驱合并)
+    #####:  343:        if(pos == 8) return; //第一个块不merge
+    %%%%%:  343-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  343-block  1
+    #####:  344:        Block tmp_block, pre_block, nxt_block;
+    %%%%%:  344-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:  345:        int num, org_size;
+call    0 never executed
+    #####:  346:        Blocks.get_info(num, 1);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  347:        Blocks.read(tmp_block, pos);
+    %%%%%:  347-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  348:        Blocks.read(pre_block, tmp_block.pre_index);
+    %%%%%:  348-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  349:        if(tmp_block.nxt_index){//如果不是尾结点
+    %%%%%:  349-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  350:            Blocks.read(nxt_block, tmp_block.nxt_index);
+    %%%%%:  350-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  351:            nxt_block.pre_index = pre_block.pos;
+    #####:  352:            Blocks.update(nxt_block, nxt_block.pos);
+    %%%%%:  352-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+        -:  353:        }
+    #####:  354:        pre_block.nxt_index = tmp_block.nxt_index;
+    #####:  355:        org_size = pre_block.size;
+    #####:  356:        pre_block.size += tmp_block.size;
+    #####:  357:        for(int i = org_size; i < pre_block.size; ++i){
+    %%%%%:  357-block  0
+    %%%%%:  357-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  358:            pre_block.array[i] = tmp_block.array[i - org_size];
+    %%%%%:  358-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+        -:  359:        }
+    #####:  360:        Blocks.update(pre_block, pre_block.pos);
+    %%%%%:  360-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  361:        Blocks.Delete(tmp_block.pos);
+    %%%%%:  361-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  362:        if(pre_block.size >= ApartLen)
+    %%%%%:  362-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  363:            Split(pre_block.pos);
+    %%%%%:  363-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  364:    }
+        -:  365:};
+        -:  366:
+        -:  367:#endif //BOOKSTORE_BLOCKS_H

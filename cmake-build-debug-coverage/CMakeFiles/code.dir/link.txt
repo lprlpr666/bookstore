@@ -1,0 +1,1 @@
+/usr/bin/c++ --coverage -g CMakeFiles/code.dir/main.cpp.o -o code 
