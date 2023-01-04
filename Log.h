@@ -5,8 +5,7 @@
 #ifndef BOOKSTORE_LOG_H
 #define BOOKSTORE_LOG_H
 
-#include <iostream>
-#include <iomanip>
+#include<bits/stdc++.h>
 
 struct FinanceLog{//一个对象表示一次交易
     bool ty = 0;//表示buy or import 0表示buy(收入)， 1表示import(支出)
@@ -51,7 +50,7 @@ public:
         int tot_time;
         double income = 0, outcome = 0;
         FinanceLog cur;
-        Fin_Log_Data.get_info(tot_time, 1);
+        Fin_Log_Data.getinfo(tot_time, 1);
         for(int i = 8; i <= 8 + (tot_time - 1) * sizeofF; i += sizeofF){
             Fin_Log_Data.read(cur, i);
             if(!cur.ty){
@@ -71,7 +70,7 @@ public:
         int tot_time;
         double income = 0, outcome = 0;
         FinanceLog cur;
-        Fin_Log_Data.get_info(tot_time, 1);
+        Fin_Log_Data.getinfo(tot_time, 1);
         if(num > tot_time){
             cout << "Invalid\n";
             return;
@@ -130,7 +129,7 @@ public:
     void report_finance(){
         int tot_time;
         FinanceLog cur;
-        Fin_Log_Data.get_info(tot_time, 1);
+        Fin_Log_Data.getinfo(tot_time, 1);
         cout << "~~~~~~~~~~~~~~~~~~~~ report finance ~~~~~~~~~~~~~~~~~~~~" << endl << endl;
         for(int i = 8; i <= 8 + (tot_time - 1) * sizeofF; i += sizeofF){
             Fin_Log_Data.read(cur, i);

@@ -1,18 +1,9 @@
 #ifndef BOOKSTORE_ACCOUNT_H
 #define BOOKSTORE_ACCOUNT_H
 
-#include <stack>
-#include <iostream>
-#include <string>
+#include<bits/stdc++.h>
 #include "Blocks.h"
-
-
-using std::cin;
-using std::string;
-using std::cout;
-using std::endl;
-using std::stack;
-
+using namespace std;
 struct User_Security{
     bool flag;//表示是否已经创建了密保问题
     char Question[64];

@@ -1,13 +1,7 @@
 #ifndef BOOKSTORE_BOOKS_H
 #define BOOKSTORE_BOOKS_H
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <cstdio>
-#include <iomanip>
-#include <algorithm>
-#include <set>
+#include<bits/stdc++.h>
 
 using std::cout;
 using std::endl;
@@ -227,7 +221,7 @@ public:
         ISBN_Index.Find(tmp_ISBN, ans);
         if(ans.empty()){//如果没有则创建
             int cnt;
-            Book_Data.get_info(cnt, 1);
+            Book_Data.getinfo(cnt, 1);
             Selected = Book(tmp_ISBN, cnt);
             tmp_account.Change_ID(Selected.Get_ID());
             int pos = 0;

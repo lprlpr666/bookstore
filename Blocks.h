@@ -1,151 +1,116 @@
-//
-// Created by zbl on 2021/12/18.
-//
-
-//实现了文件中的 map<string, T>
-//T可为任意类型,并不局限于int
-
 #ifndef BOOKSTORE_BLOCKS_H
 #define BOOKSTORE_BLOCKS_H
-#include <iostream>
-#include <vector>
-#include <cstdio>
-#include <algorithm>
-#include <cstring>
-#include <cmath>
-#include <fstream>
-
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-using std::vector;
-using std::fstream;
-
-const int MaxLen = 65;
-const int MaxBlockLen = 1000;
-const int ApartLen = 1500;
-const int MergeLen = 500;
+#include<bits/stdc++.h>
+const int si=sizeof(int);
+using namespace std;
 
 template<class T, int info_len = 2>
-class MemoryRiver {//一个MemoryRiver 对应一个文件
-private:
-    /* your code here */
+class MemoryRiver {
+    int sizeT = sizeof(T);
     fstream file;
     string file_name;
-    int sizeofT = sizeof(T);
-
 public:
     MemoryRiver() = default;
-
-    MemoryRiver(const string& file_name) : file_name(file_name) { initialise();}
-
-    void initialise(string FN = "") {
-        if (FN != "") file_name = FN;
+    MemoryRiver(const string& s) : file_name(s) {
+        initialise();
+    }
+    void getinfo(int& index, int b) ;
+    void writeinfo(int index, int b) ;
+    int write(T &t) ;
+    void update(T &t, const int index) ;
+    void read(T &t, const int index) ;
+    void Delete(int index);
+    void initialise(string s = "") {
+        if (s != "") file_name = s;
         file.open(file_name, std::fstream::in | std::fstream::out);
-        if(!file){//打开不成功说明文件不存在,并且初始化
+        if(!file){
             file.open(file_name, std::ofstream::out);
             int tmp = 0;
             for (int i = 0; i < info_len; ++i)
-                file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
+                file.write(reinterpret_cast<char *>(&tmp), si);
         }
         file.close();
-    }
-
-    /*
-    void initialise(string FN = "") {
-        if (FN != "") file_name = FN;
-        file.open(file_name, std::ios::out);
-        int tmp = 0;
-        for (int i = 0; i < info_len; ++i)
-            file.write(reinterpret_cast<char *>(&tmp), sizeof(int));
-        file.close();
-    }
-     */
-
-    //读出第n个int的值赋给tmp，1_base
-    void get_info(int& tmp, int n) {
-        if (n > info_len) return;
-        file.open(file_name);
-        file.seekg((n - 1) * sizeof(int));
-        file.read(reinterpret_cast<char*>(&tmp), sizeof(int));
-        file.close();
-        return;
-    }
-
-    //将tmp写入第n个int的位置，1_base
-    void write_info(int tmp, int n) {
-        if (n > info_len) return;
-        file.open(file_name);
-        file.seekp((n - 1) * sizeof(int));
-        file.write(reinterpret_cast<char*>(&tmp), sizeof(int));
-        file.close();
-        return;
-    }
-
-    //在文件合适位置写入类对象t，并返回写入的位置索引index
-    //位置索引意味着当输入正确的位置索引index，在以下三个函数中都能顺利的找到目标对象进行操作
-    //位置索引index可以取为对象写入的起始位置
-    int write(T &t) {
-        /* your code here */
-        int index;
-        int num_T, del_head;
-        get_info(num_T, 1);
-        get_info(del_head, 2);
-        if(!del_head)//在文件尾部加
-            index = info_len * sizeof(int) + num_T * sizeofT;
-        else {//在释放掉的空间加
-            index = del_head;
-            file.open(file_name);
-            file.seekg(del_head);
-            file.read(reinterpret_cast<char*>(&del_head), sizeof(int));
-            file.close();
-        }
-        file.open(file_name);
-        file.seekp(index);
-        file.write(reinterpret_cast<char*>(&t), sizeofT);
-        file.close();
-        write_info(++num_T, 1);
-        write_info(del_head, 2);//更新 del_head 的值
-        return index;
-    }
-
-    //用t的值更新位置索引index对应的对象，保证调用的index都是由write函数产生
-    void update(T &t, const int index) {
-        /* your code here */
-        file.open(file_name);
-        file.seekp(index);
-        file.write(reinterpret_cast<char*>(&t), sizeofT);
-        file.close();
-    }
-
-    //读出位置索引index对应的T对象的值并赋值给t，保证调用的index都是由write函数产生
-    void read(T &t, const int index) {
-        /* your code here */
-        file.open(file_name);
-        file.seekg(index);
-        file.read(reinterpret_cast<char*>(&t), sizeofT);
-        file.close();
-    }
-
-    //删除位置索引index对应的对象(不涉及空间回收时，可忽略此函数)，保证调用的index都是由write函数产生
-
-    void Delete(int index) {//放入vector中
-        int del_head;
-        get_info(del_head, 2);
-        file.open(file_name);
-        file.seekp(index);
-        file.write(reinterpret_cast<char*>(&del_head), sizeof(int));
-        del_head = index;
-        file.close();
-        write_info(del_head, 2);
     }
 };
 
-class Node{//存储一个键值对
+template<class T, int info_len>
+void MemoryRiver<T, info_len>::Delete(int index) {
+    int del_head;
+    getinfo(del_head, 2);
+    file.open(file_name);
+    file.seekp(index);
+    file.write(reinterpret_cast<char*>(&del_head), si);
+    del_head = index;
+    file.close();
+    writeinfo(del_head, 2);
+    return;
+}
+
+template<class T, int info_len>
+void MemoryRiver<T, info_len>::read(T &t, const int index) {
+    file.open(file_name);
+    file.seekg(index);
+    file.read(reinterpret_cast<char*>(&t), sizeT);
+    file.close();
+    return;
+}
+
+template<class T, int info_len>
+void MemoryRiver<T, info_len>::update(T &t, const int index) {
+    file.open(file_name);
+    file.seekp(index);
+    file.write(reinterpret_cast<char*>(&t), sizeT);
+    file.close();
+    return;
+}
+
+template<class T, int info_len>
+int MemoryRiver<T, info_len>::write(T &t) {
+    int index,num_T, del_head;
+    getinfo(num_T, 1);
+    getinfo(del_head, 2);
+    if(!del_head)//在文件尾部加
+        index = info_len * si + num_T * sizeT;
+    else {//在释放掉的空间加
+        index = del_head;
+        file.open(file_name);
+        file.seekg(del_head);
+        file.read(reinterpret_cast<char*>(&del_head), si);
+        file.close();
+    }
+    file.open(file_name);
+    file.seekp(index);
+    file.write(reinterpret_cast<char*>(&t), sizeT);
+    file.close();
+    writeinfo(++num_T, 1);
+    writeinfo(del_head, 2);//更新 del_head 的值
+    return index;
+}
+
+template<class T, int info_len>
+void MemoryRiver<T, info_len>::writeinfo(int index, int b) {
+    if (b > info_len) return;
+    file.open(file_name);
+    file.seekp((b - 1) * si);
+    file.write(reinterpret_cast<char*>(&index), si);
+    file.close();
+    return;
+}
+
+template<class T, int info_len>
+void MemoryRiver<T, info_len>::getinfo(int &index, int b) {
+        if (b > info_len) return;
+        file.open(file_name);
+        file.seekg((b - 1) * si);
+        file.read(reinterpret_cast<char*>(&index), si);
+        file.close();
+        return;
+}
+
+class Node{
 private:
     int value;
-    char key[MaxLen];
+    char key[65];
 public:
     friend class Block;
     friend class BlockList;
@@ -180,7 +145,7 @@ private:
     //存储该块的前驱,后继,该块中数据的数量, 该块的起始位置
     int pre_index, nxt_index, size, pos;
     //存储该块中最大和最小的pair
-    Node array[(MaxBlockLen << 1) + 5];
+    Node array[(1000 << 1) + 5];
 public:
     friend class BlockList;
     Block() : pre_index(0), nxt_index(0), size(0), pos(-1){}
@@ -206,7 +171,7 @@ public:
     BlockList(const string& name):Blocks(name){}
     void Insert(const Node& tmp){
         int num, fpos;
-        Blocks.get_info(num, 1);//获取块数;
+        Blocks.getinfo(num, 1);//获取块数;
         fpos = 8;
         if(!num){//第一个插入的元素,没有可以被读取的块,于是创建一个新的块
             Block new_block;
@@ -252,14 +217,14 @@ public:
                     break;
                 }
             }
-            if(tmp_block.size >= ApartLen){//触发分裂
+            if(tmp_block.size >= 1500){//触发分裂
                 Split(tmp_block.pos);
             }
         }
     }
     void FindAll(vector<int>& ans){
         int num, fpos = 8;
-        Blocks.get_info(num, 1);
+        Blocks.getinfo(num, 1);
         Block tmp_block;
         for(int i = fpos; i; i = tmp_block.nxt_index){
             Blocks.read(tmp_block, i);
@@ -270,7 +235,7 @@ public:
     }
     void Find(const string& TmpK, vector<int>& ans){
         int num, fpos = 8;
-        Blocks.get_info(num, 1);
+        Blocks.getinfo(num, 1);
         Block tmp_block;
         for(int i = fpos; i;){
             Blocks.read(tmp_block, i);
@@ -296,7 +261,7 @@ public:
     }
     void Delete(const Node& tmp){//先找到该条目,找不到就返回
         int num, fpos = 8;
-        Blocks.get_info(num, 1);
+        Blocks.getinfo(num, 1);
         Block tmp_block;
         for(int i = fpos; i; i = tmp_block.nxt_index){
             Blocks.read(tmp_block, i);
@@ -313,7 +278,7 @@ public:
                         for(int k = j; k < tmp_block.size; ++k)//依次修改数组元素
                             tmp_block.array[k] = tmp_block.array[k + 1];
                         Blocks.update(tmp_block, i);
-                        if(tmp_block.size <= MergeLen) Merge(tmp_block.pos);
+                        if(tmp_block.size <= 500) Merge(tmp_block.pos);
                         break;
                     }
                     else if(tmp_block.array[j] > tmp) break;
@@ -325,7 +290,7 @@ public:
     void Split(const int& pos){//位于pos处的块分裂(向后分裂,即分裂出的块是被分裂的后继)
         Block tmp_block, new_block;
         int org_size, num;
-        Blocks.get_info(num, 1);
+        Blocks.getinfo(num, 1);
         Blocks.read(tmp_block, pos);
         org_size = tmp_block.size;
         tmp_block.size /= 2;
@@ -343,7 +308,7 @@ public:
         if(pos == 8) return; //第一个块不merge
         Block tmp_block, pre_block, nxt_block;
         int num, org_size;
-        Blocks.get_info(num, 1);
+        Blocks.getinfo(num, 1);
         Blocks.read(tmp_block, pos);
         Blocks.read(pre_block, tmp_block.pre_index);
         if(tmp_block.nxt_index){//如果不是尾结点
@@ -359,7 +324,7 @@ public:
         }
         Blocks.update(pre_block, pre_block.pos);
         Blocks.Delete(tmp_block.pos);
-        if(pre_block.size >= ApartLen)
+        if(pre_block.size >= 1500)
             Split(pre_block.pos);
     }
 };

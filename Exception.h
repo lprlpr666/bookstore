@@ -5,7 +5,7 @@
 #ifndef MAIN_CPP_EXCEPTION_H
 #define MAIN_CPP_EXCEPTION_H
 
-#include <exception>
+#include<bits/stdc++.h>
 
 class Exception : public std::exception{};
 

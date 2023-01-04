@@ -5,10 +5,7 @@
 #ifndef BOOKSTORE_COMMAND_H
 #define BOOKSTORE_COMMAND_H
 
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <string>
+#include<bits/stdc++.h>
 #include "Account.h"
 #include "Books.h"
 #include "Log.h"
