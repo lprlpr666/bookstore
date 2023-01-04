@@ -1,7 +1,9 @@
 #ifndef BOOKSTORE_ACCOUNT_H
 #define BOOKSTORE_ACCOUNT_H
 
-#include <bits/stdc++.h>
+#include <stack>
+#include <iostream>
+#include <string>
 #include "Blocks.h"
 
 

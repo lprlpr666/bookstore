@@ -1,7 +1,13 @@
 #ifndef BOOKSTORE_BOOKS_H
 #define BOOKSTORE_BOOKS_H
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cstdio>
+#include <iomanip>
+#include <algorithm>
+#include <set>
 
 using std::cout;
 using std::endl;
