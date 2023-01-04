@@ -114,31 +114,59 @@ private:
 public:
     friend class Block;
     friend class BlockList;
-    Node() : key(""){}
-    Node(const string& str, const int& val){
-        strcpy(key, str.c_str());
-        value = val;
-    }
-    bool operator == (const Node& tmp) const {
-        return value == tmp.value && !strcmp(key, tmp.key);
-    }
-    bool operator != (const Node& tmp) const {
-        return !(*this == tmp);
-    }
-    bool operator < (const Node& tmp) const {
-        if(!strcmp(key, tmp.key)) return value < tmp.value;
-        return strcmp(key, tmp.key) < 0 ? true : false;
-    }
-    bool operator > (const Node& tmp) const {
-        return !(*this < tmp) && *this != tmp;
-    }
-    bool operator <= (const Node& tmp) const {
-        return *this < tmp || *this == tmp;
-    }
-    bool operator >= (const Node& tmp) const {
-        return *this > tmp || *this == tmp;
-    }
+    Node();
+    Node(const string& s, const int& index);
+    bool operator == (const Node& tmp) const ;
+    bool operator != (const Node& tmp) const ;
+    bool operator < (const Node& tmp) const ;
+    bool operator > (const Node& tmp) const ;
+    bool operator <= (const Node& tmp) const ;
+    bool operator >= (const Node& tmp) const ;
 };
+
+bool Node::operator==(const Node &tmp) const {
+    if(value == tmp.value&& strcmp(key, tmp.key)==0)return true;
+    else {
+        return false;
+    }
+}
+
+bool Node::operator!=(const Node &tmp) const {
+    if(*this==tmp)return false;
+    else return true;
+}
+
+bool Node::operator<(const Node &tmp) const {
+    if(strcmp(key, tmp.key)==0) return value < tmp.value;
+    else {
+        return strcmp(key, tmp.key) < 0;
+    }
+}
+
+bool Node::operator>(const Node &tmp) const {
+    if((*this < tmp)&& *this != tmp)return false;
+    else return true;
+}
+
+bool Node::operator<=(const Node &tmp) const {
+    if(((*this) < tmp) || (*this == tmp))return true;
+    else return false;
+}
+
+bool Node::operator>=(const Node &tmp) const {
+    if(((*this)>  tmp) || (*this == tmp))return true;
+    else return false;
+}
+
+Node::Node():key("") {
+
+}
+
+Node::Node(const string &s, const int &index) {
+    strcpy(key, s.c_str());
+    value = index;
+
+}
 
 class Block{//一个块 头部:重要信息 尾部:Node 数组
 private:
