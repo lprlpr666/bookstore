@@ -4,7 +4,9 @@
 
 #ifndef BOOKSTORE_LOG_H
 #define BOOKSTORE_LOG_H
-#include <bits/stdc++.h>
+
+#include <iostream>
+#include <iomanip>
 
 struct FinanceLog{//一个对象表示一次交易
     bool ty = 0;//表示buy or import 0表示buy(收入)， 1表示import(支出)
