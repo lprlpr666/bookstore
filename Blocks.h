@@ -7,13 +7,7 @@
 
 #ifndef BOOKSTORE_BLOCKS_H
 #define BOOKSTORE_BLOCKS_H
-#include <iostream>
-#include <vector>
-#include <cstdio>
-#include <algorithm>
-#include <cstring>
-#include <cmath>
-#include <fstream>
+#include <bits/stdc++.h>
 
 using std::cin;
 using std::cout;
