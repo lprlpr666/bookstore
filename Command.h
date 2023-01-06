@@ -1,7 +1,3 @@
-//
-// Created by zbl on 2021/12/18.
-//
-
 #ifndef BOOKSTORE_COMMAND_H
 #define BOOKSTORE_COMMAND_H
 
